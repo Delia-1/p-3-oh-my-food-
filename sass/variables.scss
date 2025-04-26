@@ -28,8 +28,15 @@ $font-secondary: 'Roboto', sans-serif;
   font-weight: bold;
 }
 
-@mixin text-18-light{
+@mixin text-18 ($weight: 700){
   font-family: $font-secondary;
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: $weight;
+}
+
+
+@mixin text-17 ($weight: 300){
+  font-family: $font-secondary;
+  font-size: 17px;
+  font-weight: $weight;
 }

@@ -65,7 +65,7 @@
 .nav__paragraphe {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: 300;
   margin: 10px 0;
   text-align: center;
 }
@@ -77,19 +77,21 @@
   border: none;
   margin: 20px 0;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
 
 .step {
-  padding: 20px 20px;
+  padding: 24px 20px;
 }
 .step__title {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 1.4em;
+  letter-spacing: 0.8px;
 }
 .step__articles {
   display: flex;
@@ -99,13 +101,13 @@
   width: 78%;
   display: flex;
   border-radius: 20px;
-  padding: 1.6em 2.2em;
+  padding: 1.6em 2.3em;
   gap: 1.5em;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   position: relative;
   margin-left: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 .step__number {
   width: 24px;
@@ -121,12 +123,60 @@
   top: 24px;
 }
 .step__icon {
-  font-size: 20px;
+  font-size: 19px;
+  color: #7E7E7E;
+}
+.step__icon--primary {
+  color: #9356DC;
+  font-size: 18px;
 }
 .step__paragraphe {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  flex-direction: column;
+  padding: 10px 10px;
+}
+.restaurants__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.restaurants__article {
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
+.restaurants__img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants__img-container {
+  position: relative;
+}
+.restaurants__tag {
+  position: absolute;
+  border: 1px solid green;
+  background-color: #99E2D0;
+  top: 5px;
+  right: 10px;
+}
+.restaurants__content {
+  display: flex;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.restaurants__icon {
+  font-size: 20px;
 }
 
 * {
