@@ -1,0 +1,15 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  border: 1px solid green;
+
+  &__title {
+    font-weight: 700;
+    color: aqua;
+  }
+}

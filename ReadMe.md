@@ -13,4 +13,7 @@ Projet OpenClassrooms : Intégration d'un site de réservation de menus gastrono
 - CSS3
 
 ## Auteur
-Ton Prénom Ton Nom
+Délia Knoepfli
+
+## Live preview
+https://delia-1.github.io/p-3-oh-my-food-/

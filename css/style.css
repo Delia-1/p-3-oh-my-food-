@@ -1,0 +1,16 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  border: 1px solid green;
+}
+.header__title {
+  font-weight: 700;
+  color: aqua;
+}
+
+/*# sourceMappingURL=style.css.map */
