@@ -1,0 +1,35 @@
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$dark-blue-color: #003A68;
+
+$bg-grey: #EAEAEA;
+$bg-light-grey: #F6F6F6;
+
+
+$font-primary: "Shrikhand";
+$font-secondary: 'Roboto', sans-serif;
+
+@mixin display-f-just-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-16-400{
+  font-family: $font-secondary;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin title-24-bold{
+  font-family: $font-secondary;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@mixin text-18-light{
+  font-family: $font-secondary;
+  font-size: 18px;
+  font-weight: lighter;
+}
