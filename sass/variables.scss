@@ -16,10 +16,10 @@ $font-secondary: 'Roboto', sans-serif;
   align-items: center;
 }
 
-@mixin text-16-400{
+@mixin text-16 ($weight: 500) {
   font-family: $font-secondary;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: $weight;
 }
 
 @mixin title-24-bold{
