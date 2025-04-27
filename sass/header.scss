@@ -85,6 +85,7 @@
 
 .step {
   padding: 24px 20px;
+  height: 400px;
 
   &__title {
     @include title-24-bold;
