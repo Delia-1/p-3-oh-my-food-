@@ -2,6 +2,7 @@
   background-color: $bg-light-grey;
   flex-direction: column;
   padding: 10px 10px;
+  padding-bottom: 52px;
 
   &__container {
     @include display-f-just-center;
@@ -11,14 +12,16 @@
   };
 
   &__article {
+    width: 100%;
     border-radius:15px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   &__img {
     object-fit: cover;
-    width: 21em;
+    width: -webkit-fill-available;
+    // width: 21em;
     height: 11em;
     border-radius: 20px 20px 0 0;
     @media screen and (max-width: 340px) {
@@ -28,14 +31,20 @@
 
   &__img-container {
     position: relative;
+    padding: 2px 7px;
   }
 
   &__tag {
     position: absolute;
-    border: 1px solid green;
+    color: #008766;
     background-color: $tertiary-color;
-    top: 5px;
-    right: 10px;
+    top: 12px;
+    right: 20px;
+    border-radius: 2px;
+    width: 80px;
+    height: 30px;
+    @include text-14;
+    @include display-f-just-center;
   }
 
   &__content {
@@ -43,29 +52,29 @@
     align-content: space-around;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 13px;
+    padding: 8px 20px;
   }
 
   &__title {
     margin: 37px 0 20px 8px;
-    @include title-24-bold;
+    @include text-24-bold;
   }
 
 
   &__content__title {
     @include text-18;
-    margin: 8px 0;
+    margin:0;
   }
 
 
   &__content__paragraphe {
     @include text-17;
-    margin: 0 0 10px 0;
+    margin: 0;
   }
 
   &__icon {
     font-size: 24px;
-    margin-right: 8px;
+    margin: 0 12px 12px 0px;
   }
 
   &__icon--rempli {
@@ -73,4 +82,37 @@
   }
 
 
+}
+
+.footer {
+  @include display-f-just-center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 24px;
+  background-color: $bg-dark-grey;
+  color: white;
+
+  &__title {
+    @include title-18;
+    color: white;
+    margin: 20px 0;
+  }
+
+  &__links {
+    @include display-f-just-center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    @include text-16;
+  }
+
+  &__icon {
+    padding-right: 10px;
+    font-size: 12px;
+  }
 }

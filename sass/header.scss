@@ -58,7 +58,7 @@
   padding: 2.5em 2em;
 
   &__title {
-    @include title-24-bold;
+    @include text-24-bold;
     // margin: 0 45px;
     text-align: center;
     margin: 0 1em;
@@ -88,7 +88,7 @@
   height: 400px;
 
   &__title {
-    @include title-24-bold;
+    @include text-24-bold;
     margin-bottom: 1.4em;
     letter-spacing: 0.8px;
   }

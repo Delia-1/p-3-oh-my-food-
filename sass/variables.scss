@@ -3,8 +3,10 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $dark-blue-color: #003A68;
 
+
 $bg-grey: #EAEAEA;
 $bg-light-grey: #F6F6F6;
+$bg-dark-grey: #353535;
 
 
 $font-primary: "Shrikhand";
@@ -16,13 +18,19 @@ $font-secondary: 'Roboto', sans-serif;
   align-items: center;
 }
 
+@mixin text-14 ($weight: 400) {
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: $weight;
+}
+
 @mixin text-16 ($weight: 500) {
   font-family: $font-secondary;
   font-size: 16px;
   font-weight: $weight;
 }
 
-@mixin title-24-bold{
+@mixin text-24-bold {
   font-family: $font-secondary;
   font-size: 24px;
   font-weight: bold;
@@ -32,6 +40,12 @@ $font-secondary: 'Roboto', sans-serif;
   font-family: $font-secondary;
   font-size: 18px;
   font-weight: $weight;
+}
+@mixin title-18 ($weight: 400){
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: $weight;
+  font-style: italic;
 }
 
 
