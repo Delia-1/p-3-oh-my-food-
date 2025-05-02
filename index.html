@@ -35,88 +35,109 @@
       </section>
       <section class="step">
         <h3 class="step__title">Fontionnement</h3>
-        <div class="step__articles"></div>
+        <div class="step__cards"></div>
 
-        <article class="step__article">
-            <div class="step__number">1</div>
-            <i class="fa-solid fa-mobile-screen-button step__icon"></i>
-            <h4 class="step__paragraphe">Choisissez un restaurant</h4>
+        <article class="card">
+          <div class="card__number">1</div>
+          <i class="fa-solid fa-mobile-screen-button card__icon"></i>
+          <h4 class="card__title">Choisissez un restaurant</h4>
         </article>
 
-        <article class="step__article">
-          <div class="step__number">2</div>
-          <i class="fa-solid fa-list-ul step__icon"></i>
-          <h4 class="step__paragraphe">Composez votre menu</h4>
+        <article class="card">
+          <div class="card__number">2</div>
+          <i class="fa-solid fa-list-ul card__icon"></i>
+          <h4 class="card__title">Composez votre menu</h4>
       </article>
 
-      <article class="step__article">
-        <div class="step__number">3</div>
-        <i class="fa-solid fa-store step__icon step__icon--primary "></i>
-        <h4 class="step__paragraphe">Dégustez au restaurant</h4>
+      <article class="card">
+        <div class="card__number">3</div>
+        <i class="fa-solid fa-store card__icon card__icon--primary "></i>
+        <h4 class="card__title">Dégustez au restaurant</h4>
       </article>
 
       </section>
+
       <section class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <div class="restaurants__container">
-          <a href="#" class="restaurants__page-link">
-            <article class="restaurants__article">
-              <div class="restaurants__img-container">
-                <img class="restaurants__img" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'une assiette au restaurant">
-                <btn class="restaurants__btn">Nouveau</btn>
+          <a href="#" class="restaurants__article">
+
+            <!-- article,  pas plus de 2niveaux + dissocier les blocs en fonction du sujet -->
+            <article class="article">
+              <div class="image">
+                <img class="image__img" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'une assiette au restaurant">
+                <span class="image__btn">Nouveau</span>
               </div>
-              <div class="restaurants__content">
-                <div class="restaurants__texts">
-                  <h3 class="restaurants__content__title">La palette du goût</h3>
-                  <p class="restaurants__content__paragraphe">Ménilmontant</p>
+              <div class="content">
+                <div class="content__texts">
+                  <h3 class="content__title">La palette du goût</h3>
+                  <p class="content__paragraphe">Ménilmontant</p>
                 </div>
-                <i class="fa-regular fa-heart restaurants__icon"></i>
+                <label class="content__like" aria-label="Ajouter aux favoris">
+                  <input type="checkbox" class="content__checkbox" />
+                  <i class="fa-regular fa-heart content__icon content__icon--empty"></i>
+                  <i class="fa-solid fa-heart content__icon content__icon--filled"></i>
+                </label>
               </div>
             </article>
           </a>
 
-          <a href="#" class="restaurants__page-link">
-            <article class="restaurants__article">
-              <div class="restaurants__img-container">
-                <img class="restaurants__img" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo d'une assiette au restaurant">
-                <btn class="restaurants__btn">Nouveau</btn>
+          <a href="#" class="restaurants__article">
+            <article class="article">
+              <div class="image">
+                <img class="image__img" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo d'une assiette au restaurant">
+                <span class="image__btn">Nouveau</span>
               </div>
-              <div class="restaurants__content">
-                <div class="restaurants__texts">
-                  <h3 class="restaurants__content__title">La note enchantée</h3>
-                  <p class="restaurants__content__paragraphe">Charonne</p>
+              <div class="content">
+                <div class="content__texts">
+                  <h3 class="content__title">La note enchantée</h3>
+                  <p class="content__paragraphe">Charonne</p>
                 </div>
-                <i class="fa-solid fa-heart restaurants__icon restaurants__icon--rempli"></i>
+                <label class="content__like" aria-label="Ajouter aux favoris">
+                  <input type="checkbox" class="content__checkbox" />
+                  <i class="fa-regular fa-heart content__icon content__icon--empty"></i>
+                  <i class="fa-solid fa-heart content__icon content__icon--filled"></i>
+                </label>
+
+
               </div>
             </article>
           </a>
 
-          <a href="#" class="restaurants__page-link">
-            <article class="restaurants__article">
-              <div class="restaurants__img-container">
-                <img class="restaurants__img" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo d'une assiette au restaurant">
+          <a href="#" class="restaurants__article">
+            <article class="article">
+              <div class="image">
+                <img class="image__img" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo d'une assiette au restaurant">
               </div>
-              <div class="restaurants__content">
-                <div class="restaurants__texts">
-                  <h3 class="restaurants__content__title">À la française</h3>
-                  <p class="restaurants__content__paragraphe">Cité Rouge</p>
+              <div class="content">
+                <div class="content__texts">
+                  <h3 class="content__title">À la française</h3>
+                  <p class="content__paragraphe">Cité Rouge</p>
                 </div>
-                <i class="fa-regular fa-heart restaurants__icon"></i>
+                <label class="content__like" aria-label="Ajouter aux favoris">
+                  <input type="checkbox" class="content__checkbox" />
+                  <i class="fa-regular fa-heart content__icon content__icon--empty"></i>
+                  <i class="fa-solid fa-heart content__icon content__icon--filled"></i>
+                </label>
               </div>
             </article>
           </a>
 
-          <a href="#" class="restaurants__page-link">
-            <article class="restaurants__article">
-              <div class="restaurants__img-container">
-                <img class="restaurants__img" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo d'une assiette au restaurant">
+          <a href="#" class="restaurants__article">
+            <article class="article">
+              <div class="image">
+                <img class="image__img" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo d'une assiette au restaurant">
               </div>
-              <div class="restaurants__content">
-                <div class="restaurants__texts">
-                  <h3 class="restaurants__content__title">Le délice des sens</h3>
-                  <p class="restaurants__content__paragraphe">Folie-Méricourt</p>
+              <div class="content">
+                <div class="content__texts">
+                  <h3 class="content__title">Le délice des sens</h3>
+                  <p class="content__paragraphe">Folie-Méricourt</p>
                 </div>
-                <i class="fa-regular fa-heart restaurants__icon"></i>
+                <label class="content__like" aria-label="Ajouter aux favoris">
+                  <input type="checkbox" class="content__checkbox" />
+                  <i class="fa-regular fa-heart content__icon content__icon--empty"></i>
+                  <i class="fa-solid fa-heart content__icon content__icon--filled"></i>
+                </label>
               </div>
             </article>
           </a>
@@ -128,12 +149,25 @@
       <div class="footer__title-cont">
         <h4 class="footer__title" >ohmyfood</h4>
       </div>
-      <div class="footer__links">
-        <a href="" class="footer__link"> <i class="fa-solid fa-utensils footer__icon"></i>Proposez un restaurant</a>
-        <a href="" class="footer__link"> <i class="fa-solid fa-handshake-angle footer__icon"></i>Devenir partenaire</a>
-        <a href="" class="footer__link">Mentions légales</a>
-        <a href="mailto:contact@monsite.com" class="footer__link">Contact</a>
-      </div>
+      <ul class="list__links">
+      <li>
+        <a href="" class="link">
+          <i class="fa-solid fa-utensils link__icon"></i>Proposez un restaurant
+        </a>
+      </li>
+
+      <li>
+        <a href="" class="link">
+          <i class="fa-solid fa-handshake-angle link__icon"></i>Devenir partenaire
+        </a>
+      </li>
+      <li>
+        <a href="" class="link">Mentions légales</a>
+      </li>
+      <li>
+        <a href="mailto:contact@monsite.com" class="link">Contact</a>
+      </li>
+      </ul>
     </footer>
   </div>
 </body>

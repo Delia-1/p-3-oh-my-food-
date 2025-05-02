@@ -73,19 +73,19 @@
   &__btn {
     background: linear-gradient($secondary-color, $primary-color);
     border-radius: 25px ;
-    color: white;
+    color: $white;
     padding: 16px 20px;
     border: none;
     margin: 20px 0;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     text-decoration: none;
     @include text-16;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in;
 
     &:hover {
       background: linear-gradient(
-        lighten($secondary-color, 5%),
-        lighten($primary-color, 5%)
+        lighten($secondary-color, 3%),
+        lighten($primary-color, 3%)
       );
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
     }
@@ -102,12 +102,13 @@
     letter-spacing: 0.8px;
   }
 
-  &__articles {
+  &__cards {
     display: flex;
     flex-direction: column;
   }
 
-  &__article {
+
+  .card {
     width: 76%;
     border-radius: 20px;
     padding: 0.3em 2.3em;
@@ -119,41 +120,52 @@
     margin-bottom: 28px;
     @include display-f-just-center;
     justify-content: flex-start;
+
+
+    &__number {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $primary-color;
+      color: $white;
+      @include display-f-just-center;
+      @include text-14;
+
+      position: absolute;
+      left: -7px;
+      top: 24px;
+    }
+
+    &__icon {
+      font-size: 19px;
+      color: $step-icon;
+    }
+
+    &__icon--primary {
+      color: $primary-color;
+      font-size: 18px;
+    }
+
+    &__title {
+      @include text-16
+    }
+
   }
 
-  &__number {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: $primary-color;
-    color: white;
-    @include display-f-just-center;
-
-    position: absolute;
-    left: -7px;
-    top: 24px;
-  }
-
-  &__icon {
-    font-size: 19px;
-    color: #7E7E7E;
-  }
-
-  &__icon--primary {
-    color: $primary-color;
-    font-size: 18px;
-  }
-
-  &__paragraphe {
-    @include text-16
-  }
 }
+
+
 
 .restaurants  {
   background-color: $bg-light-grey;
   flex-direction: column;
   padding: 16px 10px;
   padding-bottom: 52px;
+
+  &__title {
+    margin: 37px 0 20px 8px;
+    @include text-24-bold;
+  }
 
   &__container {
     @include display-f-just-center;
@@ -162,116 +174,208 @@
     padding: 0 5px;
   };
 
-  &__page-link {
+  &__article {
     width: 100%;
     border-radius:15px;
-    background-color: white;
+    background-color: $white;
     // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
+
+
+// pas sur du tout test
+    position: relative;
+    display: block;
   }
 
-  &__img {
-    object-fit: cover;
-    width: -webkit-fill-available;
-    // width: 21em;
-    height: 11em;
-    border-radius: 20px 20px 0 0;
-    @media screen and (max-width: 340px) {
-      width: 18em;
+
+
+  .image {
+    position: relative;
+    // padding: 2px 7px;
+
+    &__img {
+      object-fit: cover;
+      width: -webkit-fill-available;
+      // width: 21em;
+      height: 11em;
+      border-radius: 20px 20px 0 0;
+      @media screen and (max-width: 340px) {
+        width: 18em;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      color: $nouveau-btn-green;
+      background-color: $tertiary-color;
+      top: 12px;
+      right: 20px;
+      border-radius: 2px;
+      width: 80px;
+      height: 30px;
+      @include text-14;
+      @include display-f-just-center;
     }
   }
 
-  &__img-container {
-    position: relative;
-    // padding: 2px 7px;
-  }
 
-  &__btn {
-    position: absolute;
-    color: #008766;
-    background-color: $tertiary-color;
-    top: 12px;
-    right: 20px;
-    border-radius: 2px;
-    width: 80px;
-    height: 30px;
-    @include text-14;
-    @include display-f-just-center;
-  }
 
-  &__content {
+  .content {
     display: flex;
     align-content: space-around;
     justify-content: space-between;
     align-items: center;
     padding: 14px 16px 15px 16px;
     color: black;
+
+    // Pour la gestion du toggle des checkbox
+    // ~ : sélecteur de frère général , Quand cette checkbox est cochée, applique un style à ses frères qui viennent après elle.
+    .content__checkbox:checked ~ .content__icon--empty {
+      opacity: 0;
+    }
+
+    .content__checkbox:checked ~ .content__icon--filled {
+      opacity: 1;
+    }
+
+    &__icon--empty:focus {
+      opacity: 0;
+    }
+
+    &__icon--filled:focus {
+      opacity: 1;
+    }
+
+    &__texts {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    &__title {
+      @include text-18;
+      margin:0;
+    }
+
+
+    &__paragraphe {
+      @include text-17;
+      margin: 0;
+    }
+
+    &__like {
+      position: relative;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      margin: 0 12px 12px 0px;
+      z-index: 2;
+      pointer-events: auto;
+    }
+
+    &__checkbox {
+      display: none;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 24px;
+      transition: opacity 0.5s ease;
+
+      &--empty {
+        opacity: 1;
+      }
+
+      &--filled {
+        opacity: 0;
+        background: linear-gradient($primary-color, $secondary-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+      }
+
+    }
+
+
   }
 
-  &__texts {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+
+
+
+// .content__like:active .content__icon--empty {
+//   opacity: 0;
+// }
+
+// .content__like:active .content__icon {
+//   opacity: 1;
+// }
+
+    // &__icon--empty {
+    //   font-size: 24px;
+    //   margin: 0 12px 12px 0px;
+    //   opacity: 100%;
+
+    //   &:active {
+    //     opacity: 0;
+    //   }
+    // }
+
+    // &__icon {
+    //   font-size: 24px;
+    //   margin: 0 12px 12px 0px;
+    //   background: linear-gradient($primary-color, $secondary-color);
+    //   // background-clip: text;
+    //   // -webkit-background-clip: text;
+    //   // -webkit-text-fill-color: transparent;
+    //   // transition: transform 0.3s ease;
+    //   // background: linear-gradient(...);
+    //   background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    //   opacity: 0;
+
+    //   &:active {
+    //     opacity: 100%;
+    //   }
+    // }
+
   }
 
-  &__title {
-    margin: 37px 0 20px 8px;
-    @include text-24-bold;
-  }
-
-
-  &__content__title {
-    @include text-18;
-    margin:0;
-  }
-
-
-  &__content__paragraphe {
-    @include text-17;
-    margin: 0;
-  }
-
-  &__icon {
-    font-size: 24px;
-    margin: 0 12px 12px 0px;
-  }
-
-  &__icon--rempli {
-    color: linear-gradient($primary-color, $secondary-color);;
-  }
-
-
-}
 
 .footer {
   @include display-f-just-center;
   flex-direction: column;
   align-items: flex-start;
-  padding: 16px 22px;
+  padding: 28px 22px;
   background-color: $bg-dark-grey;
-  color: white;
+  color: $white;
 
   &__title {
     @include title-18;
-    color: white;
+    color: $white;
     margin: 0;
   }
 
-  &__links {
+  .list__links {
     @include display-f-just-center;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 16px;
+    gap: 4px;
   }
 
-  &__link {
-    color: white;
-    margin-bottom: 8px;
+  .link {
+    color: $white;
     @include text-16(400);
-  }
 
-  &__icon {
-    padding-right: 10px;
-    font-size: 12px;
+      &__icon {
+        padding-right: 10px;
+        font-size: 12px;
+      }
   }
 }

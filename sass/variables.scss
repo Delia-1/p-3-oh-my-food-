@@ -2,6 +2,9 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $dark-blue-color: #003A68;
+$white: #ffffff;
+$step-icon: #7E7E7E;
+$nouveau-btn-green: #008766;
 
 
 $bg-grey: #EAEAEA;
@@ -60,4 +63,14 @@ $font-secondary: 'Roboto', sans-serif;
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
