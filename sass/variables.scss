@@ -38,6 +38,12 @@ $font-secondary: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: bold;
 }
+@mixin title-28 {
+  font-family: $font-primary;
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+}
 
 @mixin text-18 ($weight: 700){
   font-family: $font-secondary;

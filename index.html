@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div class="main-container">
@@ -60,7 +60,7 @@
       <section class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <div class="restaurants__container">
-          <a href="#" class="restaurants__article">
+          <a href="restaurants/palette-du-gout.html" class="restaurants__article">
 
             <!-- article,  pas plus de 2niveaux + dissocier les blocs en fonction du sujet -->
             <article class="article">
@@ -73,11 +73,40 @@
                   <h3 class="content__title">La palette du goût</h3>
                   <p class="content__paragraphe">Ménilmontant</p>
                 </div>
-                <label class="content__like" aria-label="Ajouter aux favoris">
-                  <input type="checkbox" class="content__checkbox" />
-                  <i class="fa-regular fa-heart content__icon content__icon--empty"></i>
-                  <i class="fa-solid fa-heart content__icon content__icon--filled"></i>
-                </label>
+
+                <svg width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%"/>
+                      <stop offset="100%"/>
+                    </linearGradient>
+
+                    <mask id="fillMask">
+                      <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+                      <rect id="maskRect" x="0" y="0" width="100%" height="100%" fill="black"/>
+                    </mask>
+                  </defs>
+                  <path
+                    id="heartFill"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="url(#heartGradient)"
+                    mask="url(#fillMask)"
+                  />
+                  <path
+                    id="heart-stroke-black"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="none"
+                    stroke="black"
+                    stroke-width="1"
+                 />
+                  <path
+                    id="heart-stroke-gradient"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="none"
+                    stroke="url(heartGradient)"
+                    stroke-width="1"
+                  />
+                </svg>
               </div>
             </article>
           </a>
@@ -98,7 +127,6 @@
                   <i class="fa-regular fa-heart content__icon content__icon--empty"></i>
                   <i class="fa-solid fa-heart content__icon content__icon--filled"></i>
                 </label>
-
 
               </div>
             </article>

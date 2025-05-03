@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Cela indique au navigateur de définir la largeur du viewport égale à celle de l'appareil et de ne pas appliquer de zoom initial.​ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="main-container">
+    <header class="header">
+      <div class="header__container-logo">
+       <h1 class="header__title">
+        <img class="header__logo" src="../images/logo/ohmyfood.png" alt="ohmyfood le super site de reservations de repas">
+      </h1>
+      </div>
+      <div class="header__container-location">
+        <i class="fa-solid fa-location-dot header__icon"></i>
+        <p class="header__paragraphe">Paris, Belleville</p>
+      </div>
+    </header>
+    <main>
+      <div class="image">
+
+        <img  class="restaurant-image" src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat de restaurant">
+      </div>
+      <div class="menu">
+        <div class="menu__title-container">
+          <h1 class="menu__title">La palette du goût</h1>
+          <svg width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"/>
+                <stop offset="100%"/>
+              </linearGradient>
+
+              <mask id="fillMask">
+                <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+                <rect id="maskRect" x="0" y="0" width="100%" height="100%" fill="black"/>
+              </mask>
+            </defs>
+            <path
+              id="heartFill"
+              d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+              fill="url(#heartGradient)"
+              mask="url(#fillMask)"
+            />
+            <path
+              id="heart-stroke-black"
+              d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+              fill="none"
+              stroke="black"
+              stroke-width="1"
+           />
+            <path
+              id="heart-stroke-gradient"
+              d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+              fill="none"
+              stroke="url(heartGradient)"
+              stroke-width="1"
+            />
+          </svg>
+        </div>
+        <section class="menu__étape">
+          <h2 class="menu__étape__title">Entrées</h2>
+          <article class="options">
+            <div class="option__texts">
+              <h3 option__intitulé>Fricassée d'escargots</h3>
+              <small option__détail>Au piment d'Espelette </small>
+            </div>
+            <div class="option__prix">25€</div>
+          </article>
+          <article class="options">
+            <div class="option__texts">
+              <h3 option__intitulé>Foie gras de canard mi-cuit</h3>
+              <small option__détail>Et ses copeaux de truffe noire</small>
+            </div>
+            <div class="option__prix">35€</div>
+          </article>
+          <article class="options">
+            <div class="option__texts">
+              <h3 option__intitulé>Œuf au plat</h3>
+              <small option__détail>Assaisonné à la truffe sur lit de caviar</small>
+            </div>
+            <div class="option__prix">20€</div>
+          </article>
+
+        </section>
+        <section class="menu__étape">
+          <h2 class="menu__étape__title">Plats</h2>
+          <article class="options">
+            <div class="option__texts">
+              <h3 option__intitulé>Filet de bœuf aux herbes</h3>
+              <small option__détail>Accompagné de sa ribambelle de légumes</small>
+            </div>
+            <div class="option__prix">40€</div>
+          </article>
+          <article class="options">
+            <div class="option__texts">
+              <h3 option__intitulé>Parmentier de queue de bœuf</h3>
+              <small option__détail>À la truffe noire sur sa purée de panais</small>
+            </div>
+            <div class="option__prix">35€</div>
+          </article>
+          <article class="options">
+            <div class="option__texts">
+              <h3 option__intitulé>Filet de turbot</h3>
+              <small option__détail>Aux agrumes</small>
+            </div>
+            <div class="option__prix">44€</div>
+          </article>
+        </section>
+        <section class="menu__étape">
+          <h2 class="menu__étape__title">Desserts</h2>
+          <article class="options">
+            <div class="option__texts">
+              <h3 option__intitulé>Paris-Brest</h3>
+              <small option__détail>Revisité</small>
+            </div>
+            <div class="option__prix">18€</div>
+          </article>
+          <article class="options">
+            <div class="option__texts">
+              <h3 option__intitulé>Macaron au chocolat d'exception </h3>
+              <small option__détail>Et glace à la vanille de Madagascar</small>
+            </div>
+            <div class="option__prix">22€</div>
+          </article>
+          <article class="options">
+            <div class="option__texts">
+              <h3 option__intitulé>Mousse au chocolat </h3>
+              <small option__détail>Au piment d'Espelette et à la truffe noire</small>
+            </div>
+            <div class="option__prix">23€</div>
+          </article>
+        </section>
+      </div>
+      <h1></h1>
+
+
+
+
+    </main>
+    <footer class="footer">
+      <div class="footer__title-cont">
+        <h4 class="footer__title" >ohmyfood</h4>
+      </div>
+      <ul class="list__links">
+      <li>
+        <a href="" class="link">
+          <i class="fa-solid fa-utensils link__icon"></i>Proposez un restaurant
+        </a>
+      </li>
+
+      <li>
+        <a href="" class="link">
+          <i class="fa-solid fa-handshake-angle link__icon"></i>Devenir partenaire
+        </a>
+      </li>
+      <li>
+        <a href="" class="link">Mentions légales</a>
+      </li>
+      <li>
+        <a href="mailto:contact@monsite.com" class="link">Contact</a>
+      </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

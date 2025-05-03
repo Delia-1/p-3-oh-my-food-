@@ -305,46 +305,39 @@
 
   }
 
+}
 
+#heartGradient stop:first-child {
+  stop-color: $primary-color;
+}
+#heartGradient stop:last-child {
+  stop-color: $secondary-color;
+}
 
+#maskRect {
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
 
-// .content__like:active .content__icon--empty {
-//   opacity: 0;
-// }
+svg:hover #maskRect {
+  transform: translateY(-100%);
+}
 
-// .content__like:active .content__icon {
-//   opacity: 1;
-// }
+#heart-stroke-black {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+#heart-stroke-gradient {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+svg:hover #heart-stroke-black {
+  opacity: 0;
+}
+svg:hover #heart-stroke-gradient {
+  opacity: 1;
+}
 
-    // &__icon--empty {
-    //   font-size: 24px;
-    //   margin: 0 12px 12px 0px;
-    //   opacity: 100%;
-
-    //   &:active {
-    //     opacity: 0;
-    //   }
-    // }
-
-    // &__icon {
-    //   font-size: 24px;
-    //   margin: 0 12px 12px 0px;
-    //   background: linear-gradient($primary-color, $secondary-color);
-    //   // background-clip: text;
-    //   // -webkit-background-clip: text;
-    //   // -webkit-text-fill-color: transparent;
-    //   // transition: transform 0.3s ease;
-    //   // background: linear-gradient(...);
-    //   background-clip: text;
-    //   -webkit-text-fill-color: transparent;
-    //   opacity: 0;
-
-    //   &:active {
-    //     opacity: 100%;
-    //   }
-    // }
-
-  }
 
 
 .footer {
