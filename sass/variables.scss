@@ -20,10 +20,20 @@ $font-secondary: 'Roboto', sans-serif;
   justify-content: center;
   align-items: center;
 }
+@mixin display-f-col {
+  display: flex;
+  flex-direction: column;
+}
 
 @mixin text-14 ($weight: 400) {
   font-family: $font-secondary;
   font-size: 14px;
+  font-weight: $weight;
+}
+
+@mixin text-15 ($weight: 300) {
+  font-family: $font-secondary;
+  font-size: 15px;
   font-weight: $weight;
 }
 

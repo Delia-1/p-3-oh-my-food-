@@ -27,20 +27,21 @@ ul {
   flex-direction: column;
   justify-content: center;
 }
-.header__title {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header__container-logo {
+.header__container {
   margin-bottom: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header__logo {
+.header .title-logo {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.header .logo {
   padding: 22px 0 12px 0;
   width: 44%;
 }
@@ -364,59 +365,106 @@ svg:hover #heart-stroke-gradient {
   font-size: 12px;
 }
 
+.link-homepage {
+  position: relative;
+  right: 17vw;
+}
+.link-homepage__icon {
+  height: 20px;
+  width: 20px;
+}
+
+.logo--menu {
+  margin-right: 5vw;
+}
+
 .restaurant-image {
   object-fit: cover;
   width: -webkit-fill-available;
-  height: 11em;
-  position: absolute;
+  height: 17em;
 }
 
 .menu {
+  width: -webkit-fill-available;
   display: flex;
   justify-content: center;
   align-items: center;
   align-items: flex-start;
   flex-direction: column;
   background-color: #F6F6F6;
-  position: relative;
+  margin-top: -58px;
   border-radius: 40px 40px 0 0;
-  top: 140px;
-  padding: 0 20px;
+  padding: 3vw;
+  justify-self: center;
+  align-items: center;
 }
-
-.menu__title-container {
+.menu__name-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  width: 100%;
+  gap: 38px;
+  margin-bottom: -4px;
+}
+.menu__course {
+  margin-bottom: 16px;
+}
+.menu__course__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 6px;
+  width: 10%;
 }
 
-.menu__title {
+.menu__name {
   font-family: "Shrikhand";
   font-size: 28px;
   font-weight: 400;
   font-style: italic;
 }
 
-.menu__étape__title {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  text-transform: uppercase;
-  border-bottom: 2px solid #99E2D0;
-}
-
 .options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #ffffff;
-  width: 18em;
-  margin-top: 20px;
-  padding: 3px;
+  width: 90vw;
+  margin-bottom: 12px;
+  padding: 10px 6px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
+.options--last {
+  box-shadow: none;
+}
 .options__texts {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px 8px;
+}
+.options__texts--intitulé {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px 0 0 8px;
+}
+.options__texts--détail {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0;
+}
+.options__prix {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav__btn--menu {
+  padding: 14px 50px;
+  margin-top: 14px;
 }
 
 * {

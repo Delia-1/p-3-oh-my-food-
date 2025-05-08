@@ -1,50 +1,101 @@
+// HEADER
+.link-homepage {
+  position: relative;
+  right: 17vw;
+
+  &__icon {
+    height: 20px;
+    width: 20px;
+  }
+}
+.logo--menu {
+  margin-right: 5vw;
+}
+
 .restaurant-image {
   object-fit: cover;
   width: -webkit-fill-available;
-  height: 11em;
-  position: absolute
+  height: 17em;
 }
 
 .menu {
+  width: -webkit-fill-available;
   @include display-f-just-center;
   align-items: flex-start;
   flex-direction: column;
   background-color: $bg-light-grey;
-  position: relative;
+  margin-top: -58px;
   border-radius: 40px 40px 0 0;
-  top: 140px;
-  padding: 0 20px;
-}
-
-.menu__title-container {
-  display: flex;
+  padding: 3vw;
+  justify-self: center;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
 
+  &__name-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 38px;
+    margin-bottom: -4px;
+
+  }
+
+  &__course {
+    // @include display-f-col;
+    margin-bottom: 16px;
+
+    &__title {
+      @include text-16(400);
+      text-transform: uppercase;
+      border-bottom: 3px solid $tertiary-color;
+      padding-bottom: 6px;
+      width: 10%;
+      }
+  }
 }
-.menu__title {
+
+
+.menu__name {
   @include title-28;
 }
 
 
-.menu__étape__title {
-@include text-16(300);
-text-transform: uppercase;
-border-bottom: 2px solid $tertiary-color;
-}
-
 .options {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: $white;
-  width: 18em;
-  margin-top: 20px;
-  padding: 3px;
+  width: 90vw;
+  margin-bottom: 12px;
+  padding: 10px 6px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 
+
+  &--last {
+    box-shadow: none;
+  }
+
     &__texts {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      padding: 4px 8px;
+
+      &--intitulé {
+        @include text-18(600);
+        margin: 0px 0 0 8px;
+      }
+
+      &--détail {
+        @include text-15;
+        padding: 0;
+      }
     }
+      &__prix {
+        @include text-15(600)
+      }
+
+}
+.nav__btn--menu {
+  padding: 14px 50px;
+  margin-top: 14px;
 }

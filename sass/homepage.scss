@@ -14,22 +14,24 @@
   flex-direction: column;
   justify-content: center;
 
-
-  &__title {
-    margin: 0;
-    @include display-f-just-center;
-  }
-
-  &__container-logo {
+  &__container {
     margin-bottom: 2px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     @include display-f-just-center;
   }
 
-  &__logo {
+  .title-logo {
+    margin: 0;
+    @include display-f-just-center;
+    position: relative;
+
+  }
+  .logo {
     padding: 22px 0 12px 0;
     width: 44%;
   }
+
+
 
   &__container-location {
     // align-items: center;
