@@ -40,8 +40,13 @@
   }
 
   &__course {
-    // @include display-f-col;
-    margin-bottom: 16px;
+    margin-bottom: 2vh;
+
+    @for $i from 1 through 3 {
+      &[data-index="#{$i}"] {
+        animation-delay: 0.75s * $i;
+      }
+    }
 
     &__title {
       @include text-16(400);
@@ -61,41 +66,128 @@
 
 .options {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  // flex-wrap: nowrap;
+  align-items: center;
   background: $white;
-  width: 90vw;
-  margin-bottom: 12px;
-  padding: 10px 6px;
+  width: 94vw;
+  height: 11vh;
+  margin-bottom: 2.5vh;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-
+  overflow: hidden;
 
   &--last {
     box-shadow: none;
   }
 
     &__texts {
-      display: flex;
-      justify-content: space-between;
-      padding: 4px 8px;
+      @include display-f-col;
+      // justify-content: space-between;
+      flex: 1;
+      padding-left: 4vw;
+      min-width: 0;
 
       &--intitulé {
         @include text-18(600);
-        margin: 0px 0 0 8px;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
       }
 
       &--détail {
         @include text-15;
-        padding: 0;
+        padding-top: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
       }
     }
-      &__prix {
-        @include text-15(600)
-      }
+
+
+  &__anim-wrapper {
+    display: flex;
+    // align-items: flex-end;
+
+    &--prix {
+      // display: inline-block;
+      @include text-15(600);
+      padding: 5.5vh 0 0 2vw;
+      line-height: 28px;
+      transition: transform 0.3s ease;
+    }
+
+
+    &--check {
+      height: 69px;
+      // width: 0;
+      // overflow: hidden;
+      background: $tertiary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      // transition: none;
+      // white-space: nowrap;
+    }
+  }
+
+  &:hover &__anim-wrapper--check {
+    // transform-origin: right;
+    animation: scale 0.4s ease forwards;
+  }
+  &:hover &__anim-wrapper--prix {
+    padding: 5.5vh 2vw 0 7vw;
+  }
 
 }
+.fa-circle-check {
+  color: white;
+  font-size: 20px;
+  // position: relative;
+}
+
+
+
 .nav__btn--menu {
   padding: 14px 50px;
   margin-top: 14px;
+}
+@keyframes scale {
+  0% {
+    // transform: scaleX(0);
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    // opacity: 0;
+  }
+  100% {
+    // transform: scaleX(1);
+    width: 59px;
+    padding-left: 0;
+    // padding-right: 20px;
+    opacity: 1;
+  }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+ .fade-in-bottom {
+  animation: fade-in-bottom 1s ease-out both;
+}
+ @keyframes fade-in-bottom {
+  0% {
+    transform: translateY(75px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

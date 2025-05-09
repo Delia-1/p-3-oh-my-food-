@@ -406,7 +406,16 @@ svg:hover #heart-stroke-gradient {
   margin-bottom: -4px;
 }
 .menu__course {
-  margin-bottom: 16px;
+  margin-bottom: 2vh;
+}
+.menu__course[data-index="1"] {
+  animation-delay: 0.75s;
+}
+.menu__course[data-index="2"] {
+  animation-delay: 1.5s;
+}
+.menu__course[data-index="3"] {
+  animation-delay: 2.25s;
 }
 .menu__course__title {
   font-family: "Roboto", sans-serif;
@@ -427,39 +436,72 @@ svg:hover #heart-stroke-gradient {
 
 .options {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   background: #ffffff;
-  width: 90vw;
-  margin-bottom: 12px;
-  padding: 10px 6px;
+  width: 94vw;
+  height: 11vh;
+  margin-bottom: 2.5vh;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 .options--last {
   box-shadow: none;
 }
 .options__texts {
   display: flex;
-  justify-content: space-between;
-  padding: 4px 8px;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 4vw;
+  min-width: 0;
 }
 .options__texts--intitulé {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  margin: 0px 0 0 8px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .options__texts--détail {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
-  padding: 0;
+  padding-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.options__prix {
+.options__anim-wrapper {
+  display: flex;
+}
+.options__anim-wrapper--prix {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
+  padding: 5.5vh 0 0 2vw;
+  line-height: 28px;
+  transition: transform 0.3s ease;
+}
+.options__anim-wrapper--check {
+  height: 69px;
+  background: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.options:hover .options__anim-wrapper--check {
+  animation: scale 0.4s ease forwards;
+}
+.options:hover .options__anim-wrapper--prix {
+  padding: 5.5vh 2vw 0 7vw;
+}
+
+.fa-circle-check {
+  color: white;
+  font-size: 20px;
 }
 
 .nav__btn--menu {
@@ -467,6 +509,37 @@ svg:hover #heart-stroke-gradient {
   margin-top: 14px;
 }
 
+@keyframes scale {
+  0% {
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  100% {
+    width: 59px;
+    padding-left: 0;
+    opacity: 1;
+  }
+}
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+.fade-in-bottom {
+  animation: fade-in-bottom 1s ease-out both;
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(75px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 * {
   scroll-behavior: smooth;
 }
