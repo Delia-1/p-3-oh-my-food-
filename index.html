@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="loader">
+  <!-- <div class="loader">
     <img class="loader__image" src="images/logo/omf-loader.svg" alt="">
-  </div>
+  </div> -->
   <div class="main-container">
     <header class="header">
       <div class="header__container">
@@ -76,37 +76,36 @@
                   <h3 class="content__title">La palette du goût</h3>
                   <p class="content__paragraphe">Ménilmontant</p>
                 </div>
-
-                <svg width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="content__like" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <defs>
-                    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <linearGradient id="heartGradient-1" class="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
                       <stop offset="0%"/>
                       <stop offset="100%"/>
                     </linearGradient>
 
-                    <mask id="fillMask">
+                    <mask id="fillMask-1" class="fillMask">
                       <rect x="0" y="0" width="100%" height="100%" fill="white"/>
-                      <rect id="maskRect" x="0" y="0" width="100%" height="100%" fill="black"/>
+                      <rect class="maskRect" x="0" y="0" width="100%" height="100%" fill="black"/>
                     </mask>
                   </defs>
                   <path
-                    id="heartFill"
+                    class="heartFill"
                     d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-                    fill="url(#heartGradient)"
-                    mask="url(#fillMask)"
+                    fill="url(#heartGradient-1)"
+                    mask="url(#fillMask-1)"
                   />
                   <path
-                    id="heart-stroke-black"
+                    class="heart-stroke-black"
                     d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
                     fill="none"
                     stroke="black"
-                    stroke-width="1"
+                    stroke-width="1.5"
                  />
                   <path
-                    id="heart-stroke-gradient"
+                    class="heart-stroke-gradient"
                     d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
                     fill="none"
-                    stroke="url(heartGradient)"
+                    stroke="url(heartGradient-1)"
                     stroke-width="1"
                   />
                 </svg>
@@ -125,12 +124,39 @@
                   <h3 class="content__title">La note enchantée</h3>
                   <p class="content__paragraphe">Charonne</p>
                 </div>
-                <label class="content__like" aria-label="Ajouter aux favoris">
-                  <input type="checkbox" class="content__checkbox" />
-                  <i class="fa-regular fa-heart content__icon content__icon--empty"></i>
-                  <i class="fa-solid fa-heart content__icon content__icon--filled"></i>
-                </label>
+                <svg class="content__like" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="heartGradient-2" class="heartGradient"x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%"/>
+                      <stop offset="100%"/>
+                    </linearGradient>
 
+                    <mask id="fillMask-2" class="fillMask">
+                      <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+                      <rect class="maskRect" x="0" y="0" width="100%" height="100%" fill="black"/>
+                    </mask>
+                  </defs>
+                  <path
+                    class="heartFill"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="url(#heartGradient-2)"
+                    mask="url(#fillMask-2)"
+                  />
+                  <path
+                    class="heart-stroke-black"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="none"
+                    stroke="black"
+                    stroke-width="1.5"
+                 />
+                  <path
+                    class="heart-stroke-gradient"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="none"
+                    stroke="url(heartGradient-2)"
+                    stroke-width="1"
+                  />
+                </svg>
               </div>
             </article>
           </a>
@@ -145,11 +171,39 @@
                   <h3 class="content__title">À la française</h3>
                   <p class="content__paragraphe">Cité Rouge</p>
                 </div>
-                <label class="content__like" aria-label="Ajouter aux favoris">
-                  <input type="checkbox" class="content__checkbox" />
-                  <i class="fa-regular fa-heart content__icon content__icon--empty"></i>
-                  <i class="fa-solid fa-heart content__icon content__icon--filled"></i>
-                </label>
+                <svg class="content__like" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="heartGradient-3" class="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%"/>
+                      <stop offset="100%"/>
+                    </linearGradient>
+
+                    <mask id="fillMask-3" class="fillMask">
+                      <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+                      <rect class="maskRect" x="0" y="0" width="100%" height="100%" fill="black"/>
+                    </mask>
+                  </defs>
+                  <path
+                    class="heartFill"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="url(#heartGradient-3)"
+                    mask="url(#fillMask-3)"
+                  />
+                  <path
+                    class="heart-stroke-black"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="none"
+                    stroke="black"
+                    stroke-width="1.5"
+                 />
+                  <path
+                    class="heart-stroke-gradient"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="none"
+                    stroke="url(heartGradient-3)"
+                    stroke-width="1"
+                  />
+                </svg>
               </div>
             </article>
           </a>
@@ -164,11 +218,39 @@
                   <h3 class="content__title">Le délice des sens</h3>
                   <p class="content__paragraphe">Folie-Méricourt</p>
                 </div>
-                <label class="content__like" aria-label="Ajouter aux favoris">
-                  <input type="checkbox" class="content__checkbox" />
-                  <i class="fa-regular fa-heart content__icon content__icon--empty"></i>
-                  <i class="fa-solid fa-heart content__icon content__icon--filled"></i>
-                </label>
+                <svg class="content__like" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="heartGradient-4" class="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%"/>
+                      <stop offset="100%"/>
+                    </linearGradient>
+
+                    <mask id="fillMask-4" class="fillMask">
+                      <rect x="0" y="0" width="100%" height="100%" fill="white"/>
+                      <rect class="maskRect" x="0" y="0" width="100%" height="100%" fill="black"/>
+                    </mask>
+                  </defs>
+                  <path
+                    class="heartFill"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="url(#heartGradient-4)"
+                    mask="url(#fillMask-4)"
+                  />
+                  <path
+                    class="heart-stroke-black"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="none"
+                    stroke="black"
+                    stroke-width="1.5"
+                 />
+                  <path
+                    class="heart-stroke-gradient"
+                    d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                    fill="none"
+                    stroke="url(heartGradient-4)"
+                    stroke-width="1"
+                  />
+                </svg>
               </div>
             </article>
           </a>

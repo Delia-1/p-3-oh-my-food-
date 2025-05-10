@@ -1,3 +1,4 @@
+// COLORS
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
@@ -6,14 +7,20 @@ $white: #ffffff;
 $step-icon: #7E7E7E;
 $nouveau-btn-green: #008766;
 
-
+// BACKGROUNG COLORS
 $bg-grey: #EAEAEA;
 $bg-light-grey: #F6F6F6;
 $bg-dark-grey: #353535;
 
-
+// FONTS
 $font-primary: "Shrikhand";
 $font-secondary: 'Roboto', sans-serif;
+
+// BREAKPOINTS
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// REUSABLE MIXINS
 
 @mixin display-f-just-center{
   display: flex;
@@ -25,6 +32,8 @@ $font-secondary: 'Roboto', sans-serif;
   flex-direction: column;
 }
 
+
+  // FONTS MINXINS
 @mixin text-14 ($weight: 400) {
   font-family: $font-secondary;
   font-size: 14px;
@@ -43,9 +52,9 @@ $font-secondary: 'Roboto', sans-serif;
   font-weight: $weight;
 }
 
-@mixin text-24-bold {
+@mixin text-bold ($font-size: 24px) {
   font-family: $font-secondary;
-  font-size: 24px;
+  font-size: $font-size;
   font-weight: bold;
 }
 @mixin title-28 {
@@ -75,7 +84,7 @@ $font-secondary: 'Roboto', sans-serif;
 }
 
 
-
+// GNERAL
 
 a {
   text-decoration: none;

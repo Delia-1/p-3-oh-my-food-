@@ -1,72 +1,72 @@
-@keyframes hide-main-container {
-  0% {
-    opacity: 0;
-  }
+// @keyframes hide-main-container {
+//   0% {
+//     opacity: 0;
+//   }
 
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes hide-loader {
-  0% {
-    opacity: 1;
-  }
+//   99% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// @keyframes hide-loader {
+//   0% {
+//     opacity: 1;
+//   }
 
-  99% {
-    opacity: 1;
-  }
+//   99% {
+//     opacity: 1;
+//   }
 
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
-@keyframes heartbeat {
-  from {
-    transform: scale(1);
-    transform-origin: center center;
-    animation-timing-function: ease-out;
-  }
-  10% {
-    transform: scale(0.91);
-    animation-timing-function: ease-in;
-  }
-  17% {
-    transform: scale(0.98);
-    animation-timing-function: ease-out;
-  }
-  33% {
-    transform: scale(0.87);
-    animation-timing-function: ease-in;
-  }
-  45% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-  }
-}
+//   100% {
+//     opacity: 0;
+//     display: none;
+//   }
+// }
+// @keyframes heartbeat {
+//   from {
+//     transform: scale(1);
+//     transform-origin: center center;
+//     animation-timing-function: ease-out;
+//   }
+//   10% {
+//     transform: scale(0.91);
+//     animation-timing-function: ease-in;
+//   }
+//   17% {
+//     transform: scale(0.98);
+//     animation-timing-function: ease-out;
+//   }
+//   33% {
+//     transform: scale(0.87);
+//     animation-timing-function: ease-in;
+//   }
+//   45% {
+//     transform: scale(1);
+//     animation-timing-function: ease-out;
+//   }
+// }
 
-.loader {
-  position: fixed;
-  inset: 0;
-  background: $bg-grey;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  animation: fadeOut 0.5s ease 2.5s forwards;
-  animation: hide-loader 4s ease forwards;
-  opacity: 1;
+// .loader {
+//   position: fixed;
+//   inset: 0;
+//   background: $bg-grey;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 9999;
+//   animation: fadeOut 0.5s ease 2.5s forwards;
+//   animation: hide-loader 4s ease forwards;
+//   opacity: 1;
 
 
-  &__image {
-    transform: scale(150%);
-    animation: heartbeat 2s ease-in-out infinite both;
-  }
+//   &__image {
+//     transform: scale(150%);
+//     animation: heartbeat 2s ease-in-out infinite both;
+//   }
 
-}
+// }
 
 
 
@@ -86,6 +86,9 @@
   flex-direction: column;
   justify-content: center;
 
+
+
+
   &__container {
     margin-bottom: 2px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -101,13 +104,18 @@
   .logo {
     padding: 22px 0 12px 0;
     width: 44%;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 52%;
+      padding:32px 0;
+    }
   }
 
 
 
   &__container-location {
     // align-items: center;
-    background-color: $primary-color;
+    background-color: $bg-grey;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 5px;
     @include display-f-just-center;
@@ -132,10 +140,13 @@
   padding: 2.2em 2em;
 
   &__title {
-    @include text-24-bold;
-    // margin: 0 45px;
+    @include text-bold;
     text-align: center;
     margin: 0 1em;
+
+    @media (min-width: $breakpoint-desktop) {
+      @include text-bold(40px);
+    }
   }
 
   &__paragraphe {
@@ -171,7 +182,7 @@
   height: 400px;
 
   &__title {
-    @include text-24-bold;
+    @include text-bold;
     margin-bottom: 1.4em;
     letter-spacing: 0.8px;
   }
@@ -238,7 +249,7 @@
 
   &__title {
     margin: 37px 0 20px 8px;
-    @include text-24-bold;
+    @include text-bold;
   }
 
   &__container {
@@ -299,26 +310,8 @@
     align-content: space-around;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 16px 15px 16px;
+    padding: 12px 16px 15px 16px;
     color: black;
-
-    // Pour la gestion du toggle des checkbox
-    // ~ : sélecteur de frère général , Quand cette checkbox est cochée, applique un style à ses frères qui viennent après elle.
-    .content__checkbox:checked ~ .content__icon--empty {
-      opacity: 0;
-    }
-
-    .content__checkbox:checked ~ .content__icon--filled {
-      opacity: 1;
-    }
-
-    &__icon--empty:focus {
-      opacity: 0;
-    }
-
-    &__icon--filled:focus {
-      opacity: 1;
-    }
 
     &__texts {
       display: flex;
@@ -331,84 +324,47 @@
       margin:0;
     }
 
-
     &__paragraphe {
       @include text-17;
       margin: 0;
     }
 
     &__like {
-      position: relative;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      width: 24px;
-      height: 24px;
-      margin: 0 12px 12px 0px;
-      z-index: 2;
-      pointer-events: auto;
+      padding:0 10px 10px 0;
     }
-
-    &__checkbox {
-      display: none;
-    }
-
-    &__icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-size: 24px;
-      transition: opacity 0.5s ease;
-
-      &--empty {
-        opacity: 1;
-      }
-
-      &--filled {
-        opacity: 0;
-        background: linear-gradient($primary-color, $secondary-color);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-      }
-
-    }
-
 
   }
 
 }
 
-#heartGradient stop:first-child {
+.heartGradient stop:first-child {
   stop-color: $primary-color;
 }
-#heartGradient stop:last-child {
+.heartGradient stop:last-child {
   stop-color: $secondary-color;
 }
 
-#maskRect {
+.maskRect {
   transform: translateY(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
-svg:hover #maskRect {
+svg:hover .maskRect {
   transform: translateY(-100%);
 }
 
-#heart-stroke-black {
+.heart-stroke-black {
   opacity: 1;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease-in-out;
 }
-#heart-stroke-gradient {
+.heart-stroke-gradient {
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.6s ease-in-out;
 }
-svg:hover #heart-stroke-black {
+svg:hover .heart-stroke-black {
   opacity: 0;
 }
-svg:hover #heart-stroke-gradient {
+svg:hover .heart-stroke-gradient {
   opacity: 1;
 }
 
