@@ -119,6 +119,10 @@
     margin-bottom: 2px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     @include display-f-just-center;
+
+    @media (min-width: $breakpoint-desktop) {
+      box-shadow: none;
+    }
   }
 
   .title-logo {
@@ -145,6 +149,11 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 5px;
     @include display-f-just-center;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin: 0;
+      box-shadow: none;
+    }
 
   }
 
@@ -183,6 +192,10 @@
     @include text-18(300);
     margin: 10px 0;
     text-align: center;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin: 3vh 0;
+    }
   }
 
   &__btn {
@@ -197,6 +210,12 @@
     @include text-16;
     transition: all 0.5s ease-in;
 
+    @media (min-width: $breakpoint-desktop) {
+      margin: 0 26px 0 0;
+      // margin-right: 2vw;
+    }
+
+
     &:hover {
       background: linear-gradient(
         lighten($secondary-color, 3%),
@@ -207,9 +226,22 @@
   }
 }
 
+
+// main {
+//   @media (min-width: $breakpoint-desktop) {
+//     padding: 0 10vw;
+//   }
+// }
+
 .step {
   padding: 22px 20px;
   height: 400px;
+
+    @media (min-width: $breakpoint-desktop) {
+    padding: 3vh 12.5vw;
+    height: auto;
+
+  }
 
   &__title {
     @include text-bold;
@@ -220,6 +252,12 @@
   &__cards {
     display: flex;
     flex-direction: column;
+    @media (min-width: $breakpoint-desktop) {
+      // padding: 0 2vw;
+      @include display-f-just-center;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
   }
 
 
@@ -235,6 +273,12 @@
     margin-bottom: 28px;
     @include display-f-just-center;
     justify-content: flex-start;
+    align-items: center;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 23%;
+      margin-right: 2vw;
+    }
 
 
     &__number {
@@ -273,13 +317,23 @@
 
 .restaurants  {
   background-color: $bg-light-grey;
-  flex-direction: column;
+  // flex-direction: column;
   padding: 16px 10px;
   padding-bottom: 52px;
+
+  @media (min-width: $breakpoint-desktop) {
+    // idem que step section
+    padding: 0.5vh 12.5vw;
+    @include display-f-col;
+  }
 
   &__title {
     margin: 37px 0 20px 8px;
     @include text-bold;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin: 12px 0 24px 0;
+    }
   }
 
   &__container {
@@ -287,6 +341,12 @@
     flex-direction: column;
     margin: 0;
     padding: 0 5px;
+
+    @media (min-width: $breakpoint-desktop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   };
 
   &__article {
@@ -300,6 +360,14 @@
 // pas sur du tout test
     position: relative;
     display: block;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 45%;
+      margin-bottom: 5vh;
+      // flex: 33%;
+      /* Pour cumuler les % et px et dans une regle reglex la taille et le gap */
+      // max-width: calc(33.333% - 18px);
+    }
   }
 
 
