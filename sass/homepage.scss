@@ -3,11 +3,8 @@
     opacity: 0;
   }
 
-  90% {
+  99% {
     opacity: 0;
-  }
-  95% {
-    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -18,8 +15,8 @@
     opacity: 1;
   }
 
-  95% {
-    opacity: 0.9;
+  99% {
+    opacity: 1;
   }
 
   100% {
@@ -105,7 +102,7 @@
   display: flex;
   flex-direction: column;
   max-width: 2000px;
-  animation: hide-main-container 3.5s ease-in;
+  animation: hide-main-container 3s ease-in;
 }
 
 .header {
@@ -115,7 +112,7 @@
   flex-direction: column;
   justify-content: center;
 
-  &__container {
+  .wrapper-logo {
     margin-bottom: 2px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     @include display-f-just-center;
@@ -123,27 +120,28 @@
     @media (min-width: $breakpoint-desktop) {
       box-shadow: none;
     }
+
+    &__title {
+       margin: 0;
+       @include display-f-just-center;
+       position: relative;
+
+     }
   }
 
-  .title-logo {
-    margin: 0;
-    @include display-f-just-center;
-    position: relative;
-
-  }
-  .logo {
+  .logo{
     padding: 22px 0 12px 0;
     width: 44%;
 
     @media (min-width: $breakpoint-desktop) {
       width: 52%;
-      padding:32px 0;
+      padding: 42px 0 33px 0;
     }
   }
 
 
 
-  &__container-location {
+  .location {
     // align-items: center;
     background-color: $bg-grey;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -155,46 +153,47 @@
       box-shadow: none;
     }
 
+    &__icon {
+      margin-right: 17px;
+    }
+
+    &__place {
+      margin: 14px 0;
+      @include text-16;
+
+    }
   }
 
-  &__icon {
-    margin-right: 17px;
-  }
-
-  &__paragraphe {
-    margin: 14px 0;
-    @include text-16;
-
-  }
 }
 
 .nav {
   @include display-f-just-center;
   flex-direction: column;
   background-color: $bg-light-grey;
-  padding: 2.2em 2em;
+  padding: 2.2em 1.5em;
 
   @media (min-width: $breakpoint-desktop) {
-    padding: 1.6em 2em;
+    padding: 2em;
   }
 
   &__title {
     @include text-bold;
     text-align: center;
-    margin: 0 1em;
+    margin: 0 40px 0 25px;
 
     @media (min-width: $breakpoint-desktop) {
       @include text-bold(40px);
     }
   }
 
-  &__paragraphe {
+  &__text {
     @include text-18(300);
-    margin: 10px 0;
+    margin: 8px 0px 8px 6px;
+    padding: 0;
     text-align: center;
 
     @media (min-width: $breakpoint-desktop) {
-      margin: 3vh 0;
+      margin: 3.5vh 0;
     }
   }
 
@@ -202,7 +201,7 @@
     background: linear-gradient($secondary-color, $primary-color);
     border-radius: 25px ;
     color: $white;
-    padding: 16px 20px;
+    padding:  16px 18px 16px 24px;;
     border: none;
     margin: 20px 0;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -211,7 +210,7 @@
     transition: all 0.5s ease-in;
 
     @media (min-width: $breakpoint-desktop) {
-      margin: 0 26px 0 0;
+      margin: 0px 29px 0px 0;
       // margin-right: 2vw;
     }
 
@@ -234,7 +233,7 @@
 // }
 
 .step {
-  padding: 22px 20px;
+  padding: 24px 20px 20px 20px;
   height: 400px;
 
     @media (min-width: $breakpoint-desktop) {
@@ -245,13 +244,18 @@
 
   &__title {
     @include text-bold;
-    margin-bottom: 1.4em;
-    letter-spacing: 0.8px;
+    margin-bottom: 1.3em;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-bottom: 3.5vh
+
+    }
   }
 
   &__cards {
     display: flex;
     flex-direction: column;
+
     @media (min-width: $breakpoint-desktop) {
       // padding: 0 2vw;
       @include display-f-just-center;
@@ -262,15 +266,16 @@
 
 
   .card {
-    width: 76%;
+    width: 77.5%;
+    height: 72px;
     border-radius: 20px;
-    padding: 0.3em 2.3em;
-    gap: 1.5em;
+    padding: 0 10vw;
+    gap: 6vw;
     background-color: $bg-light-grey;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     position: relative;
     margin-left: 8px;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     @include display-f-just-center;
     justify-content: flex-start;
     align-items: center;
@@ -291,8 +296,13 @@
       @include text-14;
 
       position: absolute;
-      left: -7px;
-      top: 24px;
+      left: -8px;
+      top: 25px;
+
+      @media (min-width: $breakpoint-desktop) {
+        left: -10px;
+        top: 24px;
+      }
     }
 
     &__icon {
@@ -318,12 +328,11 @@
 .restaurants  {
   background-color: $bg-light-grey;
   // flex-direction: column;
-  padding: 16px 10px;
-  padding-bottom: 52px;
+  padding: 16px 10px 67px 10px;
 
   @media (min-width: $breakpoint-desktop) {
     // idem que step section
-    padding: 0.5vh 12.5vw;
+    padding: 1.5vh 12vw;
     @include display-f-col;
   }
 
@@ -332,7 +341,7 @@
     @include text-bold;
 
     @media (min-width: $breakpoint-desktop) {
-      margin: 12px 0 24px 0;
+      margin: 12px 0 24px 6px;
     }
   }
 
@@ -341,11 +350,13 @@
     flex-direction: column;
     margin: 0;
     padding: 0 5px;
+    gap: 16px;
 
     @media (min-width: $breakpoint-desktop) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      padding: 5px 8px;
     }
   };
 
@@ -354,7 +365,6 @@
     border-radius:15px;
     background-color: $white;
     // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-bottom: 20px;
 
 
 // pas sur du tout test
@@ -362,8 +372,7 @@
     display: block;
 
     @media (min-width: $breakpoint-desktop) {
-      width: 45%;
-      margin-bottom: 5vh;
+      width: 34vw;
       // flex: 33%;
       /* Pour cumuler les % et px et dans une regle reglex la taille et le gap */
       // max-width: calc(33.333% - 18px);
@@ -378,10 +387,13 @@
 
     &__img {
       object-fit: cover;
+      object-position: center 60%;
       width: -webkit-fill-available;
+      // margin: 12px 0 24px 0;
       // width: 21em;
       height: 11em;
       border-radius: 20px 20px 0 0;
+
       @media screen and (max-width: 340px) {
         width: 18em;
       }
@@ -422,7 +434,7 @@
       margin:0;
     }
 
-    &__paragraphe {
+    &__subtitle {
       @include text-17;
       margin: 0;
     }
@@ -472,30 +484,50 @@ svg:hover .heart-stroke-gradient {
   @include display-f-just-center;
   flex-direction: column;
   align-items: flex-start;
-  padding: 28px 22px;
+  padding: 24px;
   background-color: $bg-dark-grey;
   color: $white;
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: end;
+    padding: 6vh 3vw 4vh 0;
+  }
 
   &__title {
     @include title-18;
     color: $white;
     margin: 0;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: 10px;
+    }
   }
 
   .list__links {
     @include display-f-just-center;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: start;
     margin-top: 16px;
-    gap: 4px;
+    gap: 7px;
+
+    @media (min-width: $breakpoint-desktop) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 
   .link {
     color: $white;
     @include text-16(400);
 
+    @media (min-width: $breakpoint-desktop) {
+      margin-left: 10px;;
+    }
+
       &__icon {
-        padding-right: 10px;
+        padding-right: 12px;
         font-size: 12px;
       }
   }

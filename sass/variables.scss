@@ -13,7 +13,7 @@ $bg-light-grey: #F6F6F6;
 $bg-dark-grey: #353535;
 
 // FONTS
-$font-primary: "Shrikhand";
+$font-primary: "Shrikhand", sans-serif;
 $font-secondary: 'Roboto', sans-serif;
 
 // BREAKPOINTS
@@ -61,7 +61,6 @@ $breakpoint-desktop: 1024px;
   font-family: $font-primary;
   font-size: 28px;
   font-weight: 400;
-  font-style: italic;
 }
 
 @mixin text-18 ($weight: 700){

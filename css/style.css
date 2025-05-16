@@ -1,4 +1,3 @@
-@charset "UTF-8";
 a {
   text-decoration: none;
 }
@@ -17,11 +16,8 @@ ul {
   0% {
     opacity: 0;
   }
-  90% {
+  99% {
     opacity: 0;
-  }
-  95% {
-    opacity: 0.8;
   }
   100% {
     opacity: 1;
@@ -31,8 +27,8 @@ ul {
   0% {
     opacity: 1;
   }
-  95% {
-    opacity: 0.9;
+  99% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
@@ -102,7 +98,7 @@ ul {
   display: flex;
   flex-direction: column;
   max-width: 2000px;
-  animation: hide-main-container 3.5s ease-in;
+  animation: hide-main-container 3s ease-in;
 }
 
 .header {
@@ -112,7 +108,7 @@ ul {
   flex-direction: column;
   justify-content: center;
 }
-.header__container {
+.header .wrapper-logo {
   margin-bottom: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -120,11 +116,11 @@ ul {
   align-items: center;
 }
 @media (min-width: 1024px) {
-  .header__container {
+  .header .wrapper-logo {
     box-shadow: none;
   }
 }
-.header .title-logo {
+.header .wrapper-logo__title {
   margin: 0;
   display: flex;
   justify-content: center;
@@ -138,10 +134,10 @@ ul {
 @media (min-width: 1024px) {
   .header .logo {
     width: 52%;
-    padding: 32px 0;
+    padding: 42px 0 33px 0;
   }
 }
-.header__container-location {
+.header .location {
   background-color: #EAEAEA;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 5px;
@@ -150,15 +146,15 @@ ul {
   align-items: center;
 }
 @media (min-width: 1024px) {
-  .header__container-location {
+  .header .location {
     margin: 0;
     box-shadow: none;
   }
 }
-.header__icon {
+.header .location__icon {
   margin-right: 17px;
 }
-.header__paragraphe {
+.header .location__place {
   margin: 14px 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -171,11 +167,11 @@ ul {
   align-items: center;
   flex-direction: column;
   background-color: #F6F6F6;
-  padding: 2.2em 2em;
+  padding: 2.2em 1.5em;
 }
 @media (min-width: 1024px) {
   .nav {
-    padding: 1.6em 2em;
+    padding: 2em;
   }
 }
 .nav__title {
@@ -183,7 +179,7 @@ ul {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  margin: 0 1em;
+  margin: 0 40px 0 25px;
 }
 @media (min-width: 1024px) {
   .nav__title {
@@ -192,23 +188,24 @@ ul {
     font-weight: bold;
   }
 }
-.nav__paragraphe {
+.nav__text {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 300;
-  margin: 10px 0;
+  margin: 8px 0px 8px 6px;
+  padding: 0;
   text-align: center;
 }
 @media (min-width: 1024px) {
-  .nav__paragraphe {
-    margin: 3vh 0;
+  .nav__text {
+    margin: 3.5vh 0;
   }
 }
 .nav__btn {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
   color: #ffffff;
-  padding: 16px 20px;
+  padding: 16px 18px 16px 24px;
   border: none;
   margin: 20px 0;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -220,7 +217,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .nav__btn {
-    margin: 0 26px 0 0;
+    margin: 0px 29px 0px 0;
   }
 }
 .nav__btn:hover {
@@ -229,7 +226,7 @@ ul {
 }
 
 .step {
-  padding: 22px 20px;
+  padding: 24px 20px 20px 20px;
   height: 400px;
 }
 @media (min-width: 1024px) {
@@ -242,8 +239,12 @@ ul {
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 1.4em;
-  letter-spacing: 0.8px;
+  margin-bottom: 1.3em;
+}
+@media (min-width: 1024px) {
+  .step__title {
+    margin-bottom: 3.5vh;
+  }
 }
 .step__cards {
   display: flex;
@@ -259,15 +260,16 @@ ul {
   }
 }
 .step .card {
-  width: 76%;
+  width: 77.5%;
+  height: 72px;
   border-radius: 20px;
-  padding: 0.3em 2.3em;
-  gap: 1.5em;
+  padding: 0 10vw;
+  gap: 6vw;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   position: relative;
   margin-left: 8px;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,8 +295,14 @@ ul {
   font-size: 14px;
   font-weight: 400;
   position: absolute;
-  left: -7px;
-  top: 24px;
+  left: -8px;
+  top: 25px;
+}
+@media (min-width: 1024px) {
+  .step .card__number {
+    left: -10px;
+    top: 24px;
+  }
 }
 .step .card__icon {
   font-size: 19px;
@@ -312,12 +320,11 @@ ul {
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 16px 10px;
-  padding-bottom: 52px;
+  padding: 16px 10px 67px 10px;
 }
 @media (min-width: 1024px) {
   .restaurants {
-    padding: 0.5vh 12.5vw;
+    padding: 1.5vh 12vw;
     display: flex;
     flex-direction: column;
   }
@@ -330,7 +337,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .restaurants__title {
-    margin: 12px 0 24px 0;
+    margin: 12px 0 24px 6px;
   }
 }
 .restaurants__container {
@@ -340,26 +347,26 @@ ul {
   flex-direction: column;
   margin: 0;
   padding: 0 5px;
+  gap: 16px;
 }
 @media (min-width: 1024px) {
   .restaurants__container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 5px 8px;
   }
 }
 .restaurants__article {
   width: 100%;
   border-radius: 15px;
   background-color: #ffffff;
-  margin-bottom: 20px;
   position: relative;
   display: block;
 }
 @media (min-width: 1024px) {
   .restaurants__article {
-    width: 45%;
-    margin-bottom: 5vh;
+    width: 34vw;
     /* Pour cumuler les % et px et dans une regle reglex la taille et le gap */
   }
 }
@@ -368,6 +375,7 @@ ul {
 }
 .restaurants .image__img {
   object-fit: cover;
+  object-position: center 60%;
   width: -webkit-fill-available;
   height: 11em;
   border-radius: 20px 20px 0 0;
@@ -412,7 +420,7 @@ ul {
   font-weight: 700;
   margin: 0;
 }
-.restaurants .content__paragraphe {
+.restaurants .content__subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 300;
@@ -463,26 +471,45 @@ svg:hover .heart-stroke-gradient {
   align-items: center;
   flex-direction: column;
   align-items: flex-start;
-  padding: 28px 22px;
+  padding: 24px;
   background-color: #353535;
   color: #ffffff;
 }
+@media (min-width: 1024px) {
+  .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: end;
+    padding: 6vh 3vw 4vh 0;
+  }
+}
 .footer__title {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   font-size: 18px;
   font-weight: 400;
   font-style: italic;
   color: #ffffff;
   margin: 0;
 }
+@media (min-width: 1024px) {
+  .footer__title {
+    margin-left: 10px;
+  }
+}
 .footer .list__links {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: start;
   margin-top: 16px;
-  gap: 4px;
+  gap: 7px;
+}
+@media (min-width: 1024px) {
+  .footer .list__links {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .footer .link {
   color: #ffffff;
@@ -490,8 +517,13 @@ svg:hover .heart-stroke-gradient {
   font-size: 16px;
   font-weight: 400;
 }
+@media (min-width: 1024px) {
+  .footer .link {
+    margin-left: 10px;
+  }
+}
 .footer .link__icon {
-  padding-right: 10px;
+  padding-right: 12px;
   font-size: 12px;
 }
 
@@ -512,7 +544,7 @@ svg:hover .heart-stroke-gradient {
   margin-right: 5vw;
 }
 
-.restaurant-image {
+.image__restaurant {
   object-fit: cover;
   width: -webkit-fill-available;
   height: 17em;
@@ -528,7 +560,7 @@ svg:hover .heart-stroke-gradient {
   background-color: #F6F6F6;
   margin-top: -58px;
   border-radius: 40px 40px 0 0;
-  padding: 3vw;
+  padding: 12px 3vw 19px 3vw;
   justify-self: center;
   align-items: center;
 }
@@ -536,8 +568,9 @@ svg:hover .heart-stroke-gradient {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 38px;
+  gap: 34px;
   margin-bottom: -4px;
+  padding-left: 3vw;
 }
 .menu__course {
   margin-bottom: 2vh;
@@ -562,10 +595,9 @@ svg:hover .heart-stroke-gradient {
 }
 
 .menu__name {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", sans-serif;
   font-size: 28px;
   font-weight: 400;
-  font-style: italic;
 }
 
 .options {
@@ -574,7 +606,7 @@ svg:hover .heart-stroke-gradient {
   background: #ffffff;
   width: 94vw;
   height: 11vh;
-  margin-bottom: 2.5vh;
+  margin-bottom: 15px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -589,7 +621,7 @@ svg:hover .heart-stroke-gradient {
   padding-left: 4vw;
   min-width: 0;
 }
-.options__texts--intitulé {
+.options .label {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -598,7 +630,7 @@ svg:hover .heart-stroke-gradient {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.options__texts--détail {
+.options .subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -607,29 +639,29 @@ svg:hover .heart-stroke-gradient {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.options__anim-wrapper {
+.options .anim-wrapper {
   display: flex;
 }
-.options__anim-wrapper--prix {
+.options .anim-wrapper__price {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  padding: 5.5vh 0 0 2vw;
+  padding: 25px 0 0 10px;
   line-height: 28px;
   transition: transform 0.3s ease;
 }
-.options__anim-wrapper--check {
-  height: 69px;
+.options .anim-wrapper--check {
+  height: 11vh;
   background: #99E2D0;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
 }
-.options:hover .options__anim-wrapper--check {
+.options:hover .anim-wrapper__check {
   animation: scale 0.4s ease forwards;
 }
-.options:hover .options__anim-wrapper--prix {
+.options:hover .anim-wrapper__price {
   padding: 5.5vh 2vw 0 7vw;
 }
 
@@ -640,7 +672,7 @@ svg:hover .heart-stroke-gradient {
 
 .nav__btn--menu {
   padding: 14px 50px;
-  margin-top: 14px;
+  margin-top: 13px;
 }
 
 @keyframes scale {

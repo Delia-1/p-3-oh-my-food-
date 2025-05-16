@@ -17,18 +17,18 @@
 <body>
   <div class="main-container main-container-restau">
     <header class="header">
-      <div class="header__container">
-        <h1 class="title-logo">
+      <div class="wrapper-logo">
+        <h1 class="wrapper-logo__title">
           <a class="link-homepage" href="../index.html">
             <svg class="link-homepage__icon" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
           </a>
           <img class="logo logo--menu" src="../images/logo/ohmyfood.png" alt="ohmyfood le super site de reservations de repas">
         </h1>
       </div>
+      <div class="image">
+        <img  class="image__restaurant" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat de restaurant">
+      </div>
     </header>
-    <div class="image">
-      <img  class="restaurant-image" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat de restaurant">
-    </div>
     <main>
       <div class="menu">
         <div class="menu__name-container">
@@ -71,14 +71,14 @@
         <section class="menu__course fade-in-bottom" data-index="1">
           <h2 class="menu__course__title">Entrées</h2>
 
-          <article class="options" >
+          <article class="options">
             <div class="options__texts">
-              <h3 class="options__texts--intitulé">Fricassée d'escargots</h3>
-              <small class="options__texts--détail">Au piment d'Espelette </small>
+              <h3 class="label">Fricassée d'escargots</h3>
+              <small class="subtitle">Au piment d'Espelette </small>
             </div>
-            <div class="options__anim-wrapper">
-              <span class="options__anim-wrapper--prix">25€</span>
-              <div class="options__anim-wrapper--check">
+            <div class="anim-wrapper">
+              <span class="anim-wrapper__price">25€</span>
+              <div class="anim-wrapper__check">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
             </div>
@@ -87,12 +87,12 @@
 
           <article class="options">
             <div class="options__texts">
-              <h3 class="options__texts--intitulé">Foie gras de canard mi-cuit</h3>
-              <small class="options__texts--détail">Et ses copeaux de truffe noire</small>
+              <h3 class="label">Foie gras de canard mi-cuit</h3>
+              <small class="subtitle">Et ses copeaux de truffe noire</small>
             </div>
-            <div class="options__anim-wrapper">
-              <span class="options__anim-wrapper--prix">35€</span>
-              <div class="options__anim-wrapper--check">
+            <div class="anim-wrapper">
+              <span class="anim-wrapper__price">35€</span>
+              <div class="anim-wrapper__check">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
             </div>
@@ -100,12 +100,12 @@
 
           <article class="options options--last">
             <div class="options__texts">
-              <h3 class="options__texts--intitulé">Œuf au plat</h3>
-              <small class="options__texts--détail">Assaisonné à la truffe sur lit de caviar</small>
+              <h3 class="label">Œuf au plat</h3>
+              <small class="subtitle">Assaisonné à la truffe sur lit de caviar</small>
             </div>
-            <div class="options__anim-wrapper">
-              <span class="options__anim-wrapper--prix">20€</span>
-              <div class="options__anim-wrapper--check">
+            <div class="anim-wrapper">
+              <span class="anim-wrapper__price">20€</span>
+              <div class="anim-wrapper__check">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
             </div>
@@ -115,14 +115,27 @@
 
         <section class="menu__course fade-in-bottom" data-index="2">
           <h2 class="menu__course__title">Plats</h2>
-              <article class="options options--last">
+              <article class="options">
                 <div class="options__texts">
-                  <h3 class="options__texts--intitulé">Filet de bœuf aux herbes</h3>
-                  <small class="options__texts--détail">Accompagné de sa ribambelle de légumes</small>
+                  <h3 class="label">Filet de bœuf aux herbes</h3>
+                  <small class="subtitle">Accompagné de sa ribambelle de légumes</small>
                 </div>
-                <div class="options__anim-wrapper">
-                  <span class="options__anim-wrapper--prix">25€</span>
-                  <div class="options__anim-wrapper--check">
+                <div class="anim-wrapper">
+                  <span class="anim-wrapper__price">40€</span>
+                  <div class="anim-wrapper__check">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </article>
+
+              <article class="options">
+                <div class="options__texts">
+                  <h3 class="label">Parmentier de queue de bœuf</h3>
+                  <small class="subtitle">À la truffe noire sur sa purée de panais</small>
+                </div>
+                <div class="anim-wrapper">
+                  <span class="anim-wrapper__price">35€</span>
+                  <div class="anim-wrapper__check">
                     <i class="fa-solid fa-circle-check"></i>
                   </div>
                 </div>
@@ -130,25 +143,12 @@
 
               <article class="options options--last">
                 <div class="options__texts">
-                  <h3 class="options__texts--intitulé">Parmentier de queue de bœuf</h3>
-                  <small class="options__texts--détail">À la truffe noire sur sa purée de panais</small>
+                  <h3 class="label">Filet de turbot</h3>
+                  <small class="subtitle">Aux agrumes</small>
                 </div>
-                <div class="options__anim-wrapper">
-                  <span class="options__anim-wrapper--prix">35€</span>
-                  <div class="options__anim-wrapper--check">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </div>
-              </article>
-
-              <article class="options options--last">
-                <div class="options__texts">
-                  <h3 class="options__texts--intitulé">Filet de turbot</h3>
-                  <small class="options__texts--détail">Aux agrumes</small>
-                </div>
-                <div class="options__anim-wrapper">
-                  <span class="options__anim-wrapper--prix">44€</span>
-                  <div class="options__anim-wrapper--check">
+                <div class="anim-wrapper">
+                  <span class="anim-wrapper__price">44€</span>
+                  <div class="anim-wrapper__check">
                     <i class="fa-solid fa-circle-check"></i>
                   </div>
                 </div>
@@ -158,14 +158,27 @@
         <section class="menu__course fade-in-bottom" data-index="3">
           <h2 class="menu__course__title">Desserts</h2>
 
-          <article class="options options--last">
+          <article class="options">
             <div class="options__texts">
-              <h3 class="options__texts--intitulé">Paris-Brest</h3>
-              <small class="options__texts--détail">Revisité</small>
+              <h3 class="label">Paris-Brest</h3>
+              <small class="subtitle">Revisité</small>
             </div>
-            <div class="options__anim-wrapper">
-              <span class="options__anim-wrapper--prix">18€</span>
-              <div class="options__anim-wrapper--check">
+            <div class="anim-wrapper">
+              <span class="anim-wrapper__price">18€</span>
+              <div class="anim-wrapper__check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </article>
+
+          <article class="options">
+            <div class="options__texts">
+              <h3 class="label">Macaron au chocolat d'exception</h3>
+              <small class="subtitle">Et glace à la vanille de Madagascar</small>
+            </div>
+            <div class="anim-wrapper">
+              <span class="anim-wrapper__price">22€</span>
+              <div class="anim-wrapper__check">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
             </div>
@@ -173,25 +186,12 @@
 
           <article class="options options--last">
             <div class="options__texts">
-              <h3 class="options__texts--intitulé">Macaron au chocolat d'exception</h3>
-              <small class="options__texts--détail">Et glace à la vanille de Madagascar</small>
+              <h3 class="label">Mousse au chocolat</h3>
+              <small class="subtitle">Au piment d'Espelette et à la truffe noire</small>
             </div>
-            <div class="options__anim-wrapper">
-              <span class="options__anim-wrapper--prix">22€</span>
-              <div class="options__anim-wrapper--check">
-                <i class="fa-solid fa-circle-check"></i>
-              </div>
-            </div>
-          </article>
-
-          <article class="options options--last">
-            <div class="options__texts">
-              <h3 class="options__texts--intitulé">Mousse au chocolat</h3>
-              <small class="options__texts--détail">Au piment d'Espelette et à la truffe noire</small>
-            </div>
-            <div class="options__anim-wrapper">
-              <span class="options__anim-wrapper--prix">23€</span>
-              <div class="options__anim-wrapper--check">
+            <div class="anim-wrapper">
+              <span class="anim-wrapper__price">23€</span>
+              <div class="anim-wrapper__check">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
             </div>
