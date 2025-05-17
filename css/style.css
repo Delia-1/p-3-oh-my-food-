@@ -62,32 +62,32 @@ ul {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  margin: 0 40px 0 25px;
+  margin: 0 2em 0 1.2em;
 }
 @media (min-width: 1024px) {
   .nav__title {
     font-family: "Roboto", sans-serif;
     font-size: 40px;
     font-weight: bold;
-    margin: 0 40px;
+    margin: 0 9em;
   }
 }
 .nav__text {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 300;
-  margin: 8px 0px 8px 6px;
+  margin: 0.5em 0 0.5em 0.4em;
   padding: 0;
   text-align: center;
 }
 @media (min-width: 1024px) {
   .nav__text {
-    margin: 3.8vh 0;
+    margin: 1.6em 0;
   }
 }
 
 .step {
-  padding: 24px 20px 20px 20px;
+  padding: 4vh 5.5vw;
   height: 400px;
 }
 @media (min-width: 768px) {
@@ -108,11 +108,6 @@ ul {
   font-weight: bold;
   margin-bottom: 1.3em;
 }
-@media (min-width: 1024px) {
-  .step__title {
-    margin-bottom: 3.5vh;
-  }
-}
 .step__cards {
   display: flex;
   flex-direction: column;
@@ -127,7 +122,7 @@ ul {
   }
 }
 .step .card {
-  width: 77.5%;
+  width: 75%;
   height: 72px;
   border-radius: 20px;
   padding: 0 10vw;
@@ -211,7 +206,7 @@ ul {
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 16px 10px 67px 10px;
+  padding: 4vh 3vw 11vh 3vw;
 }
 @media (min-width: 768px) {
   .restaurants {
@@ -227,7 +222,7 @@ ul {
   }
 }
 .restaurants__title {
-  margin: 37px 0 20px 8px;
+  margin: 0.8em 0.4em;
   font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: bold;
@@ -239,7 +234,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .restaurants__title {
-    margin: 0 6px 21px 6px;
+    margin: 0.1em 0.2em 1em 0.3em;
   }
 }
 .restaurants__container {
@@ -278,7 +273,7 @@ ul {
 .restaurants .image__img {
   object-fit: cover;
   object-position: center 60%;
-  width: -webkit-fill-available;
+  width: 100%;
   height: 11em;
   border-radius: 20px 20px 0 0;
 }
@@ -338,7 +333,7 @@ ul {
 
 .image__restaurant {
   object-fit: cover;
-  width: -webkit-fill-available;
+  width: 100%;
   height: 17em;
 }
 @media (min-width: 768px) {
@@ -353,7 +348,6 @@ ul {
 }
 
 .menu {
-  width: -webkit-fill-available;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -385,7 +379,7 @@ ul {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 34px;
+  gap: 9vw;
   margin-bottom: -4px;
   padding-left: 3vw;
 }
