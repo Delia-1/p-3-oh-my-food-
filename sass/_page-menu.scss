@@ -1,0 +1,93 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+.main-container-restau {
+  animation: none;
+}
+
+// HEADER
+
+
+.image__restaurant {
+  object-fit: cover;
+  width: -webkit-fill-available;
+  height: 17em;
+
+      @media (min-width: $breakpoint-desktop) {
+      height: 24em;
+  }
+}
+
+// MAIN
+
+main {
+  @media (min-width: $breakpoint-desktop) {
+    // position: relative;
+  }
+}
+
+.menu {
+  width: -webkit-fill-available;
+  @include display-f-just-center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: $bg-light-grey;
+  margin-top: -58px;
+  border-radius: 40px 40px 0 0;
+  padding: 12px 3vw 19px 3vw;
+  justify-self: center;
+  align-items: center;
+
+    @media (min-width: $breakpoint-desktop) {
+        margin-top: -42px;
+        width: 67%;
+        justify-content: center;
+      }
+
+  &__name-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 34px;
+    margin-bottom: -4px;
+    padding-left: 3vw;
+
+      @media (min-width: $breakpoint-desktop) {
+        justify-content: center;
+        padding-top: 21px;
+        padding-left: 4px;
+        gap: 22px;
+        margin-bottom: 8px;
+      }
+  }
+
+  &__name {
+    @include title-28;
+  }
+
+  &__course {
+    margin-bottom: 2vh;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 66%;
+    }
+    @for $i from 1 through 3 {
+      &[data-index="#{$i}"] {
+        animation-delay: 0.75s * $i;
+      }
+    }
+
+
+    &__title {
+      @include text-16(400);
+      text-transform: uppercase;
+      border-bottom: 3px solid $tertiary-color;
+      padding-bottom: 6px;
+      width: 10%;
+
+      @media (min-width: $breakpoint-desktop) {
+        width: 7%;
+      }
+    }
+  }
+}
