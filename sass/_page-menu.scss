@@ -1,17 +1,17 @@
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
 
 .main-container-restau {
   animation: none;
 }
-
-// HEADER
 
 
 .image__restaurant {
   object-fit: cover;
   width: -webkit-fill-available;
   height: 17em;
+
+        @media (min-width: $breakpoint-tablet) {
+      height: 20em;
+  }
 
       @media (min-width: $breakpoint-desktop) {
       height: 24em;
@@ -33,15 +33,22 @@ main {
   flex-direction: column;
   background-color: $bg-light-grey;
   margin-top: -58px;
-  border-radius: 40px 40px 0 0;
+  border-radius: $radius-top;
   padding: 12px 3vw 19px 3vw;
   justify-self: center;
   align-items: center;
 
-    @media (min-width: $breakpoint-desktop) {
+      @media (min-width: $breakpoint-tablet) {
         margin-top: -42px;
+        width: 75%;
+        border-radius: 40px;
+        margin-bottom: 20px;
+      }
+
+    @media (min-width: $breakpoint-desktop) {
         width: 67%;
-        justify-content: center;
+        margin-bottom: 0;
+        border-radius: $radius-top;
       }
 
   &__name-container {
@@ -52,13 +59,13 @@ main {
     margin-bottom: -4px;
     padding-left: 3vw;
 
-      @media (min-width: $breakpoint-desktop) {
-        justify-content: center;
-        padding-top: 21px;
-        padding-left: 4px;
-        gap: 22px;
-        margin-bottom: 8px;
-      }
+    @media (min-width: $breakpoint-tablet) {
+      justify-content: center;
+      padding-top: 21px;
+      padding-left: 4px;
+      gap: 22px;
+      margin-bottom: 8px;
+    }
   }
 
   &__name {
@@ -68,6 +75,9 @@ main {
   &__course {
     margin-bottom: 2vh;
 
+        @media (min-width: $breakpoint-tablet) {
+      width: 90%;
+    }
     @media (min-width: $breakpoint-desktop) {
       width: 66%;
     }

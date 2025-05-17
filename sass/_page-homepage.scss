@@ -71,11 +71,17 @@
   padding: 24px 20px 20px 20px;
   height: 400px;
 
+  @media (min-width: $breakpoint-tablet) {
+    @include display-f-col;
+        padding: 3vh 12.5vw;
+  }
     @media (min-width: $breakpoint-desktop) {
-    padding: 3vh 12.5vw;
-    height: auto;
+      height: auto;
 
   }
+
+
+
 
   &__title {
     @include text-bold;
@@ -115,17 +121,41 @@
     justify-content: flex-start;
     align-items: center;
 
+      @media (min-width: $breakpoint-tablet) {
+        width: 48%;
+        padding: 0 4vw;
+        gap: 2vw;
+    }
+
+    &--second {
+      @media (min-width: $breakpoint-tablet) {
+        margin-left: 20%;
+      }
+    }
+    &--third {
+      @media (min-width: $breakpoint-tablet) {
+        margin-left: 40%;
+      }
+    }
+
+
     @media (min-width: $breakpoint-desktop) {
-      width: 30%;
+      width: 60%;
       margin-right: 2vw;
       padding: 0 2.5vw;
       gap: 1.5vw;
     }
-    &--first {
+
+        &--second, &--third {
       @media (min-width: $breakpoint-desktop) {
-        // margin-left: 0;
+        margin-left: 0;
       }
     }
+    // &--third {
+    //   @media (min-width: $breakpoint-desktop) {
+    //     margin-left: 0;
+    //   }
+    // }
 
 
     &__number {
@@ -160,7 +190,6 @@
     &__title {
       @include text-16
     }
-
   }
 
 }
@@ -169,19 +198,27 @@
 
 .restaurants  {
   background-color: $bg-light-grey;
-  // flex-direction: column;
   padding: 16px 10px 67px 10px;
 
-  @media (min-width: $breakpoint-desktop) {
-    // idem que step section
+
+  @media (min-width: $breakpoint-tablet) {
     padding: 3vh 12vw;
+    border-radius: $radius-top;
+  }
+
+
+  @media (min-width: $breakpoint-desktop) {
     @include display-f-col;
+    border-radius: 0;
   }
 
   &__title {
     margin: 37px 0 20px 8px;
     @include text-bold;
 
+    @media (min-width: $breakpoint-tablet) {
+      margin-bottom: 1.3em;
+    }
     @media (min-width: $breakpoint-desktop) {
       margin: 0 6px 21px 6px;
     }

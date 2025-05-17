@@ -20,6 +20,9 @@ $font-secondary: 'Roboto', sans-serif;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
+// REUSE
+$radius-top: 40px 40px 0 0;
+
 // REUSABLE MIXINS
 
 @mixin display-f-just-center{
