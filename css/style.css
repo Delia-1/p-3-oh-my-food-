@@ -134,7 +134,7 @@ ul {
 @media (min-width: 1024px) {
   .header .logo {
     width: 52%;
-    padding: 42px 0 33px 0;
+    padding: 28px 0;
   }
 }
 .header .location {
@@ -160,6 +160,11 @@ ul {
   font-size: 16px;
   font-weight: 500;
 }
+@media (min-width: 1024px) {
+  .header .location__place {
+    margin: 17px 0;
+  }
+}
 
 .nav {
   display: flex;
@@ -171,7 +176,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .nav {
-    padding: 2em;
+    padding: 1.8em;
   }
 }
 .nav__title {
@@ -186,6 +191,7 @@ ul {
     font-family: "Roboto", sans-serif;
     font-size: 40px;
     font-weight: bold;
+    margin: 0 40px;
   }
 }
 .nav__text {
@@ -198,7 +204,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .nav__text {
-    margin: 3.5vh 0;
+    margin: 3.8vh 0;
   }
 }
 .nav__btn {
@@ -231,7 +237,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .step {
-    padding: 3vh 12.5vw;
+    padding: 3.5vh 12.5vw;
     height: auto;
   }
 }
@@ -278,8 +284,10 @@ ul {
 }
 @media (min-width: 1024px) {
   .step .card {
-    width: 23%;
+    width: 30%;
     margin-right: 2vw;
+    padding: 0 2.5vw;
+    gap: 1.5vw;
   }
 }
 .step .card__number {
@@ -295,8 +303,8 @@ ul {
   font-size: 14px;
   font-weight: 400;
   position: absolute;
-  left: -8px;
-  top: 25px;
+  left: -10px;
+  top: 27px;
 }
 @media (min-width: 1024px) {
   .step .card__number {
@@ -324,7 +332,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .restaurants {
-    padding: 1.5vh 12vw;
+    padding: 3.5vh 12vw;
     display: flex;
     flex-direction: column;
   }
@@ -337,7 +345,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .restaurants__title {
-    margin: 12px 0 24px 6px;
+    margin: 0 6px 21px 6px;
   }
 }
 .restaurants__container {
@@ -355,6 +363,7 @@ ul {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 5px 8px;
+    gap: 50px;
   }
 }
 .restaurants__article {
@@ -478,9 +487,9 @@ svg:hover .heart-stroke-gradient {
 @media (min-width: 1024px) {
   .footer {
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: end;
     justify-content: end;
-    padding: 6vh 3vw 4vh 0;
+    padding: 6vh 5vw 4vh 0;
   }
 }
 .footer__title {
@@ -493,7 +502,7 @@ svg:hover .heart-stroke-gradient {
 }
 @media (min-width: 1024px) {
   .footer__title {
-    margin-left: 10px;
+    margin-left: 91px;
   }
 }
 .footer .list__links {
@@ -520,6 +529,11 @@ svg:hover .heart-stroke-gradient {
 @media (min-width: 1024px) {
   .footer .link {
     margin-left: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer .link--third {
+    margin-left: 30px;
   }
 }
 .footer .link__icon {
@@ -646,11 +660,11 @@ svg:hover .heart-stroke-gradient {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  padding: 25px 0 0 10px;
+  padding: 30px 0 0 10px;
   line-height: 28px;
   transition: transform 0.3s ease;
 }
-.options .anim-wrapper--check {
+.options .anim-wrapper__check {
   height: 11vh;
   background: #99E2D0;
   display: flex;
@@ -671,8 +685,8 @@ svg:hover .heart-stroke-gradient {
 }
 
 .nav__btn--menu {
-  padding: 14px 50px;
-  margin-top: 13px;
+  padding: 16px 50px;
+  margin-top: 8px;
 }
 
 @keyframes scale {

@@ -121,13 +121,13 @@
     &__price {
       // display: inline-block;
       @include text-15(600);
-      padding: 25px 0 0 10px;
+      padding: 30px 0 0 10px;
       line-height: 28px;
       transition: transform 0.3s ease;
     }
 
 
-    &--check {
+    &__check {
       height: 11vh;
       // width: 0;
       // overflow: hidden;
@@ -159,8 +159,8 @@
 
 
 .nav__btn--menu {
-  padding: 14px 50px;
-  margin-top: 13px;
+  padding: 16px 50px;
+  margin-top: 8px;
 }
 @keyframes scale {
   0% {

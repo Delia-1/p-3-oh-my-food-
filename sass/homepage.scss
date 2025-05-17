@@ -135,7 +135,7 @@
 
     @media (min-width: $breakpoint-desktop) {
       width: 52%;
-      padding: 42px 0 33px 0;
+      padding: 28px 0;
     }
   }
 
@@ -161,6 +161,9 @@
       margin: 14px 0;
       @include text-16;
 
+      @media (min-width: $breakpoint-desktop) {
+        margin: 17px 0;
+      }
     }
   }
 
@@ -173,7 +176,7 @@
   padding: 2.2em 1.5em;
 
   @media (min-width: $breakpoint-desktop) {
-    padding: 2em;
+    padding: 1.8em;
   }
 
   &__title {
@@ -183,6 +186,7 @@
 
     @media (min-width: $breakpoint-desktop) {
       @include text-bold(40px);
+      margin: 0 40px;
     }
   }
 
@@ -193,7 +197,7 @@
     text-align: center;
 
     @media (min-width: $breakpoint-desktop) {
-      margin: 3.5vh 0;
+      margin: 3.8vh 0;
     }
   }
 
@@ -237,7 +241,7 @@
   height: 400px;
 
     @media (min-width: $breakpoint-desktop) {
-    padding: 3vh 12.5vw;
+    padding: 3.5vh 12.5vw;
     height: auto;
 
   }
@@ -281,8 +285,15 @@
     align-items: center;
 
     @media (min-width: $breakpoint-desktop) {
-      width: 23%;
+      width: 30%;
       margin-right: 2vw;
+      padding: 0 2.5vw;
+      gap: 1.5vw;
+    }
+    &--first {
+      @media (min-width: $breakpoint-desktop) {
+        // margin-left: 0;
+      }
     }
 
 
@@ -296,8 +307,8 @@
       @include text-14;
 
       position: absolute;
-      left: -8px;
-      top: 25px;
+      left: -10px;
+      top: 27px;
 
       @media (min-width: $breakpoint-desktop) {
         left: -10px;
@@ -332,7 +343,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     // idem que step section
-    padding: 1.5vh 12vw;
+    padding: 3.5vh 12vw;
     @include display-f-col;
   }
 
@@ -341,7 +352,7 @@
     @include text-bold;
 
     @media (min-width: $breakpoint-desktop) {
-      margin: 12px 0 24px 6px;
+      margin: 0 6px 21px 6px;
     }
   }
 
@@ -357,6 +368,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 5px 8px;
+      gap: 50px;
     }
   };
 
@@ -490,9 +502,8 @@ svg:hover .heart-stroke-gradient {
 
   @media (min-width: $breakpoint-desktop) {
     flex-direction: row-reverse;
-    align-items: center;
     justify-content: end;
-    padding: 6vh 3vw 4vh 0;
+    padding: 7vh 5vw 2vh 0;
   }
 
   &__title {
@@ -501,7 +512,7 @@ svg:hover .heart-stroke-gradient {
     margin: 0;
 
     @media (min-width: $breakpoint-desktop) {
-      margin-left: 10px;
+      margin-left: 87px;
     }
   }
 
@@ -514,7 +525,7 @@ svg:hover .heart-stroke-gradient {
 
     @media (min-width: $breakpoint-desktop) {
       flex-direction: row;
-      align-items: center;
+      // align-items: center;
     }
   }
 
@@ -523,12 +534,23 @@ svg:hover .heart-stroke-gradient {
     @include text-16(400);
 
     @media (min-width: $breakpoint-desktop) {
-      margin-left: 10px;;
+      margin-left: 10px;
+    }
+
+    &--third {
+
+      @media (min-width: $breakpoint-desktop) {
+        margin-left: 26px;
+      }
     }
 
       &__icon {
         padding-right: 12px;
         font-size: 12px;
+
+        // @media (min-width: $breakpoint-desktop) {
+        //   padding-right: 0;
+        // }
       }
   }
 }
