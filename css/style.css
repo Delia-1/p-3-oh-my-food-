@@ -237,7 +237,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .step {
-    padding: 3.5vh 12.5vw;
+    padding: 3vh 12.5vw;
     height: auto;
   }
 }
@@ -332,7 +332,7 @@ ul {
 }
 @media (min-width: 1024px) {
   .restaurants {
-    padding: 3.5vh 12vw;
+    padding: 3vh 12vw;
     display: flex;
     flex-direction: column;
   }
@@ -487,22 +487,21 @@ svg:hover .heart-stroke-gradient {
 @media (min-width: 1024px) {
   .footer {
     flex-direction: row-reverse;
-    align-items: end;
     justify-content: end;
-    padding: 6vh 5vw 4vh 0;
+    padding: 6vh 4.8vw 3vh 0;
   }
 }
 .footer__title {
   font-family: "Shrikhand", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  font-style: italic;
   color: #ffffff;
   margin: 0;
 }
 @media (min-width: 1024px) {
   .footer__title {
-    margin-left: 91px;
+    margin-left: 87px;
+    padding-top: 12px;
   }
 }
 .footer .list__links {
@@ -517,7 +516,6 @@ svg:hover .heart-stroke-gradient {
 @media (min-width: 1024px) {
   .footer .list__links {
     flex-direction: row;
-    align-items: center;
   }
 }
 .footer .link {
@@ -528,12 +526,12 @@ svg:hover .heart-stroke-gradient {
 }
 @media (min-width: 1024px) {
   .footer .link {
-    margin-left: 10px;
+    margin-left: 6px;
   }
 }
 @media (min-width: 1024px) {
   .footer .link--third {
-    margin-left: 30px;
+    margin-left: 42px;
   }
 }
 .footer .link__icon {
@@ -549,19 +547,35 @@ svg:hover .heart-stroke-gradient {
   position: relative;
   right: 17vw;
 }
+@media (min-width: 1024px) {
+  .link-homepage {
+    right: 40vw;
+  }
+}
 .link-homepage__icon {
   height: 20px;
   width: 20px;
 }
 
-.logo--menu {
+.logo.logo--menu {
   margin-right: 5vw;
+}
+@media (min-width: 1024px) {
+  .logo.logo--menu {
+    margin-right: 22px;
+    width: 46%;
+  }
 }
 
 .image__restaurant {
   object-fit: cover;
   width: -webkit-fill-available;
   height: 17em;
+}
+@media (min-width: 1024px) {
+  .image__restaurant {
+    height: 24em;
+  }
 }
 
 .menu {
@@ -578,6 +592,13 @@ svg:hover .heart-stroke-gradient {
   justify-self: center;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  .menu {
+    margin-top: -42px;
+    width: 67%;
+    justify-content: center;
+  }
+}
 .menu__name-container {
   display: flex;
   align-items: center;
@@ -586,8 +607,27 @@ svg:hover .heart-stroke-gradient {
   margin-bottom: -4px;
   padding-left: 3vw;
 }
+@media (min-width: 1024px) {
+  .menu__name-container {
+    justify-content: center;
+    padding-top: 21px;
+    padding-left: 4px;
+    gap: 22px;
+    margin-bottom: 8px;
+  }
+}
+.menu__name {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+}
 .menu__course {
   margin-bottom: 2vh;
+}
+@media (min-width: 1024px) {
+  .menu__course {
+    width: 66%;
+  }
 }
 .menu__course[data-index="1"] {
   animation-delay: 0.75s;
@@ -607,11 +647,10 @@ svg:hover .heart-stroke-gradient {
   padding-bottom: 6px;
   width: 10%;
 }
-
-.menu__name {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
-  font-weight: 400;
+@media (min-width: 1024px) {
+  .menu__course__title {
+    width: 7%;
+  }
 }
 
 .options {
@@ -619,11 +658,17 @@ svg:hover .heart-stroke-gradient {
   align-items: center;
   background: #ffffff;
   width: 94vw;
-  height: 11vh;
+  height: 69px;
   margin-bottom: 15px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .options {
+    width: 100%;
+    margin-bottom: 11px;
+  }
 }
 .options--last {
   box-shadow: none;
@@ -634,6 +679,11 @@ svg:hover .heart-stroke-gradient {
   flex: 1;
   padding-left: 4vw;
   min-width: 0;
+}
+@media (min-width: 1024px) {
+  .options__texts {
+    padding-left: 1vw;
+  }
 }
 .options .label {
   font-family: "Roboto", sans-serif;
@@ -660,12 +710,17 @@ svg:hover .heart-stroke-gradient {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  padding: 30px 0 0 10px;
+  padding: 6vh 0 0 1vw;
   line-height: 28px;
   transition: transform 0.3s ease;
 }
+@media (min-width: 1024px) {
+  .options .anim-wrapper__price {
+    padding: 4vh 0 0 1vw;
+  }
+}
 .options .anim-wrapper__check {
-  height: 11vh;
+  height: 75px;
   background: #99E2D0;
   display: flex;
   align-items: center;
@@ -678,6 +733,11 @@ svg:hover .heart-stroke-gradient {
 .options:hover .anim-wrapper__price {
   padding: 5.5vh 2vw 0 7vw;
 }
+@media (min-width: 1024px) {
+  .options:hover .anim-wrapper__price {
+    padding: 4vh 2vw 0 7vw;
+  }
+}
 
 .fa-circle-check {
   color: white;
@@ -687,6 +747,15 @@ svg:hover .heart-stroke-gradient {
 .nav__btn--menu {
   padding: 16px 50px;
   margin-top: 8px;
+}
+@media (min-width: 1024px) {
+  .nav__btn--menu {
+    margin-left: 29px;
+    padding: 15px 49px;
+    margin-top: 14px;
+    align-self: center;
+    margin-bottom: 20px;
+  }
 }
 
 @keyframes scale {

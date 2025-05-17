@@ -241,7 +241,7 @@
   height: 400px;
 
     @media (min-width: $breakpoint-desktop) {
-    padding: 3.5vh 12.5vw;
+    padding: 3vh 12.5vw;
     height: auto;
 
   }
@@ -343,7 +343,7 @@
 
   @media (min-width: $breakpoint-desktop) {
     // idem que step section
-    padding: 3.5vh 12vw;
+    padding: 3vh 12vw;
     @include display-f-col;
   }
 
@@ -503,7 +503,7 @@ svg:hover .heart-stroke-gradient {
   @media (min-width: $breakpoint-desktop) {
     flex-direction: row-reverse;
     justify-content: end;
-    padding: 7vh 5vw 2vh 0;
+    padding: 6vh 4.8vw 3vh 0;
   }
 
   &__title {
@@ -513,6 +513,7 @@ svg:hover .heart-stroke-gradient {
 
     @media (min-width: $breakpoint-desktop) {
       margin-left: 87px;
+      padding-top: 12px;
     }
   }
 
@@ -534,13 +535,13 @@ svg:hover .heart-stroke-gradient {
     @include text-16(400);
 
     @media (min-width: $breakpoint-desktop) {
-      margin-left: 10px;
+      margin-left: 6px;
     }
 
     &--third {
 
       @media (min-width: $breakpoint-desktop) {
-        margin-left: 26px;
+        margin-left: 42px;
       }
     }
 

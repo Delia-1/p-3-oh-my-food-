@@ -1,3 +1,6 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
 .main-container-restau {
   animation: none;
 }
@@ -7,22 +10,41 @@
   position: relative;
   right: 17vw;
 
+  @media (min-width: $breakpoint-desktop) {
+      right: 40vw;
+    }
+
   &__icon {
     height: 20px;
     width: 20px;
   }
 }
-.logo--menu {
+.logo.logo--menu {
   margin-right: 5vw;
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-right: 22px;
+    width: 46%;
+  }
 }
 
 .image__restaurant {
   object-fit: cover;
   width: -webkit-fill-available;
   height: 17em;
+
+      @media (min-width: $breakpoint-desktop) {
+      height: 24em;
+  }
 }
 
 // MAIN
+
+main {
+  @media (min-width: $breakpoint-desktop) {
+    // position: relative;
+  }
+}
 
 .menu {
   width: -webkit-fill-available;
@@ -36,6 +58,12 @@
   justify-self: center;
   align-items: center;
 
+    @media (min-width: $breakpoint-desktop) {
+        margin-top: -42px;
+        width: 67%;
+        justify-content: center;
+      }
+
   &__name-container {
     display: flex;
     align-items: center;
@@ -44,16 +72,31 @@
     margin-bottom: -4px;
     padding-left: 3vw;
 
+      @media (min-width: $breakpoint-desktop) {
+        justify-content: center;
+        padding-top: 21px;
+        padding-left: 4px;
+        gap: 22px;
+        margin-bottom: 8px;
+      }
+  }
+
+  &__name {
+    @include title-28;
   }
 
   &__course {
     margin-bottom: 2vh;
 
+    @media (min-width: $breakpoint-desktop) {
+      width: 66%;
+    }
     @for $i from 1 through 3 {
       &[data-index="#{$i}"] {
         animation-delay: 0.75s * $i;
       }
     }
+
 
     &__title {
       @include text-16(400);
@@ -61,13 +104,12 @@
       border-bottom: 3px solid $tertiary-color;
       padding-bottom: 6px;
       width: 10%;
+
+      @media (min-width: $breakpoint-desktop) {
+        width: 7%;
       }
+    }
   }
-}
-
-
-.menu__name {
-  @include title-28;
 }
 
 
@@ -77,11 +119,16 @@
   align-items: center;
   background: $white;
   width: 94vw;
-  height: 11vh;
+  height: 69px;
   margin-bottom: 15px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+
+  @media (min-width: $breakpoint-desktop) {
+      width: 100%;
+      margin-bottom: 11px;
+    }
 
   &--last {
     box-shadow: none;
@@ -94,7 +141,10 @@
       padding-left: 4vw;
       min-width: 0;
 
+      @media (min-width: $breakpoint-desktop) {
+      padding-left: 1vw;
     }
+  }
 
     .label {
       @include text-18(600);
@@ -121,14 +171,18 @@
     &__price {
       // display: inline-block;
       @include text-15(600);
-      padding: 30px 0 0 10px;
+      padding: 6vh 0 0 1vw;
       line-height: 28px;
       transition: transform 0.3s ease;
+
+        @media (min-width: $breakpoint-desktop) {
+        padding: 4vh 0 0 1vw;
+      }
     }
 
 
     &__check {
-      height: 11vh;
+      height: 75px;
       // width: 0;
       // overflow: hidden;
       background: $tertiary-color;
@@ -147,6 +201,10 @@
   }
   &:hover .anim-wrapper__price {
     padding: 5.5vh 2vw 0 7vw;
+
+    @media (min-width: $breakpoint-desktop) {
+       padding: 4vh 2vw 0 7vw;
+      }
   }
 
 }
@@ -161,6 +219,14 @@
 .nav__btn--menu {
   padding: 16px 50px;
   margin-top: 8px;
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-left: 29px;
+    padding: 15px 49px;
+    margin-top: 14px;
+    align-self: center;
+    margin-bottom: 20px;
+  }
 }
 @keyframes scale {
   0% {
