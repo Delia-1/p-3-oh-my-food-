@@ -1,6 +1,7 @@
 // ANIM LOADER
 @keyframes hide-main-container {
   0% {
+    display: none;
     opacity: 0;
   }
   99% {
@@ -19,7 +20,6 @@
     opacity: 1;
   }
   100% {
-    // opacity: 0;
     display: none;
   }
 }

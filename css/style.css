@@ -20,6 +20,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  will-change: opacity, transform;
   animation: hide-loader 3s ease-in forwards;
   opacity: 1;
 }
@@ -27,12 +28,14 @@ ul {
   position: absolute;
   opacity: 0;
   z-index: 1;
+  will-change: opacity, transform;
   animation: text-pop-up-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.1s both;
 }
 .loader__rolling-plate {
   position: absolute;
   fill: #9356DC;
   z-index: 10;
+  will-change: opacity, transform;
   animation: roll-in-left 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both, roll-out-right 1.2s ease 1.8s;
 }
 
@@ -437,6 +440,7 @@ ul {
 
 @keyframes hide-main-container {
   0% {
+    display: none;
     opacity: 0;
   }
   99% {
