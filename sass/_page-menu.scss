@@ -74,6 +74,7 @@ main {
 
   &__course {
     margin-bottom: 2vh;
+    animation: fade-in-bottom 1s ease-out both;
 
         @media (min-width: $breakpoint-tablet) {
       width: 90%;

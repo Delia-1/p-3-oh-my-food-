@@ -1,8 +1,8 @@
+// ANIM LOADER
 @keyframes hide-main-container {
   0% {
     opacity: 0;
   }
-
   99% {
     opacity: 0;
   }
@@ -15,13 +15,11 @@
   0% {
     opacity: 1;
   }
-
   99% {
     opacity: 1;
   }
-
   100% {
-    opacity: 0;
+    // opacity: 0;
     display: none;
   }
 }
@@ -66,21 +64,17 @@
 }
 
 
+// ANIMATION CHECK EXTEND
 
-
-@keyframes scale {
+@keyframes check-scale {
   0% {
-    // transform: scaleX(0);
     width: 0;
     padding-left: 0;
     padding-right: 0;
-    // opacity: 0;
   }
   100% {
-    // transform: scaleX(1);
     width: 59px;
     padding-left: 0;
-    // padding-right: 20px;
     opacity: 1;
   }
 }
@@ -95,8 +89,4 @@
     transform: translateY(0);
     opacity: 1;
   }
-}
-
- .fade-in-bottom {
-  animation: fade-in-bottom 1s ease-out both;
 }

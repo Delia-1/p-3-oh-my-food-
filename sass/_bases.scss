@@ -35,6 +35,19 @@ $radius-top: 40px 40px 0 0;
   flex-direction: column;
 }
 
+@mixin box-shadow-medium ($span: 0.15) {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, $span);
+}
+@mixin box-shadow-small ($span: 0.25) {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, $span);
+}
+@mixin box-shadow-large ($span: 0.45) {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, $span);
+}
+@mixin box-shadow-none {
+  box-shadow: none;
+}
+
 
   // FONTS MINXINS
 @mixin text-14 ($weight: 400) {

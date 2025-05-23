@@ -399,6 +399,7 @@ ul {
 }
 .menu__course {
   margin-bottom: 2vh;
+  animation: fade-in-bottom 1s ease-out both;
 }
 @media (min-width: 768px) {
   .menu__course {
@@ -453,7 +454,6 @@ ul {
     opacity: 1;
   }
   100% {
-    opacity: 0;
     display: none;
   }
 }
@@ -491,7 +491,7 @@ ul {
     transform: translateY(-60px);
   }
 }
-@keyframes scale {
+@keyframes check-scale {
   0% {
     width: 0;
     padding-left: 0;
@@ -513,23 +513,16 @@ ul {
     opacity: 1;
   }
 }
-.fade-in-bottom {
-  animation: fade-in-bottom 1s ease-out both;
-}
-
 .header {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .header .wrapper-logo {
-  margin-bottom: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2px;
 }
 @media (min-width: 1024px) {
   .header .wrapper-logo {
@@ -541,7 +534,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 .header .logo {
   padding: 22px 0 12px 0;
@@ -559,21 +551,40 @@ ul {
 @media (min-width: 1024px) {
   .header .logo--menu {
     margin-right: 22px;
-    width: 46%;
+    width: 24%;
+    padding: 28px 14vw;
   }
 }
+.header .link-homepage {
+  position: relative;
+  right: 17vw;
+}
+@media (min-width: 768px) {
+  .header .link-homepage {
+    right: 20vw;
+  }
+}
+@media (min-width: 1024px) {
+  .header .link-homepage {
+    right: 26vw;
+  }
+}
+.header .link-homepage__icon {
+  height: 20px;
+  width: 20px;
+}
 .header .location {
-  background-color: #EAEAEA;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #EAEAEA;
+  margin-bottom: 5px;
 }
 @media (min-width: 1024px) {
   .header .location {
-    margin: 0;
     box-shadow: none;
+    margin: 0;
   }
 }
 .header .location__icon {
@@ -589,20 +600,6 @@ ul {
   .header .location__place {
     margin: 17px 0;
   }
-}
-
-.link-homepage {
-  position: relative;
-  right: 17vw;
-}
-@media (min-width: 1024px) {
-  .link-homepage {
-    right: 40vw;
-  }
-}
-.link-homepage__icon {
-  height: 20px;
-  width: 20px;
 }
 
 .footer {
@@ -647,8 +644,6 @@ ul {
 }
 .footer .list__links {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   align-items: start;
   margin-top: 16px;
@@ -687,17 +682,17 @@ ul {
 }
 
 .nav__btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.25);
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
   color: #ffffff;
   padding: 16px 18px 16px 24px;
   border: none;
   margin: 20px 0;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
   transition: all 0.5s ease-in;
 }
 @media (min-width: 1024px) {
@@ -706,8 +701,8 @@ ul {
   }
 }
 .nav__btn:hover {
-  background: linear-gradient(rgb(255, 136.3, 222.2246268657), rgb(155.1, 98.675, 222.625));
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(rgb(255, 136.3, 222.2246268657), rgb(160.5, 107.125, 224.375));
 }
 .nav__btn--menu {
   padding: 16px 50px;
@@ -759,14 +754,15 @@ svg:hover .heart-stroke-gradient {
 }
 
 .options {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
   display: flex;
+  justify-content: center;
   align-items: center;
   background: #ffffff;
   width: 94vw;
   height: 69px;
   margin-bottom: 15px;
   border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
 @media (min-width: 768px) {
@@ -825,15 +821,15 @@ svg:hover .heart-stroke-gradient {
   }
 }
 .options .anim-wrapper__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 75px;
   background: #99E2D0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   opacity: 0;
 }
 .options:hover .anim-wrapper__check {
-  animation: scale 0.4s ease forwards;
+  animation: check-scale 0.4s ease forwards;
 }
 .options:hover .anim-wrapper__price {
   padding: 5.5vh 2vw 0 7vw;
@@ -844,7 +840,7 @@ svg:hover .heart-stroke-gradient {
   }
 }
 .options .fa-circle-check {
-  color: white;
+  color: #ffffff;
   font-size: 20px;
 }
 
