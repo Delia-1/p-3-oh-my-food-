@@ -21,7 +21,7 @@ ul {
   align-items: center;
   justify-content: center;
   will-change: opacity, transform;
-  animation: hide-loader 3s ease-in forwards;
+  animation: hide-loader 0s steps(1, end) 3s forwards;
   opacity: 1;
 }
 .loader__up-logo {
@@ -35,8 +35,8 @@ ul {
   position: absolute;
   fill: #9356DC;
   z-index: 10;
-  will-change: opacity, transform;
-  animation: roll-in-left 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s both, roll-out-right 1.2s ease 1.8s;
+  will-change: transform;
+  animation: roll-in-left 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both, roll-out-right 1.3s ease forwards 1.8s;
 }
 
 .main-container {
@@ -44,7 +44,8 @@ ul {
   display: flex;
   flex-direction: column;
   max-width: 2000px;
-  animation: hide-main-container 3s ease-in;
+  opacity: 0;
+  animation: hide-main-container 3s steps(1, end) forwards;
 }
 
 .nav {
@@ -275,8 +276,8 @@ ul {
 }
 .restaurants .image__img {
   object-fit: cover;
-  object-position: center 60%;
   width: 100%;
+  object-position: center 60%;
   height: 11em;
   border-radius: 20px 20px 0 0;
 }
@@ -332,6 +333,7 @@ ul {
 
 .main-container-restau {
   animation: none;
+  opacity: 1;
 }
 
 .image__restaurant {
@@ -352,9 +354,6 @@ ul {
 
 .menu {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-items: flex-start;
   flex-direction: column;
   background-color: #F6F6F6;
   margin-top: -58px;
@@ -380,15 +379,14 @@ ul {
 }
 .menu__name-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 100%;
   gap: 9vw;
   margin-bottom: -4px;
   padding-left: 3vw;
 }
 @media (min-width: 768px) {
   .menu__name-container {
-    justify-content: center;
     padding-top: 21px;
     padding-left: 4px;
     gap: 22px;
@@ -439,72 +437,52 @@ ul {
 }
 
 @keyframes hide-main-container {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @keyframes hide-loader {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
+  to {
+    opacity: 0;
     display: none;
   }
 }
 @keyframes roll-in-left {
   0% {
     transform: translateX(-800px) rotate(-540deg);
-    opacity: 1;
   }
   100% {
     transform: translateX(0) rotate(0deg);
-    opacity: 1;
   }
 }
 @keyframes roll-out-right {
   0% {
     transform: translateX(0) rotate(0deg);
-    opacity: 1;
   }
   100% {
     transform: translateX(800px) rotate(540deg);
-    opacity: 1;
   }
 }
 @keyframes text-pop-up-top {
   0% {
     scale: 0%;
-    opacity: 0.4;
+    opacity: 0;
     transform: translateY(30px);
-    filter: blur(30px);
   }
   100% {
     scale: 200%;
     opacity: 1;
-    filter: blur(0);
     transform: translateY(-60px);
   }
 }
 @keyframes check-scale {
   0% {
-    width: 0;
-    padding-left: 0;
-    padding-right: 0;
+    opacity: 0;
+    transform: scaleX(0);
   }
   100% {
-    width: 59px;
-    padding-left: 0;
     opacity: 1;
+    transform: scaleY(1);
   }
 }
 @keyframes fade-in-bottom {
@@ -722,6 +700,14 @@ ul {
   }
 }
 
+.heartGradient stop:first-child {
+  stop-color: #9356DC;
+}
+
+.heartGradient stop:last-child {
+  stop-color: #FF79DA;
+}
+
 .maskRect {
   transform: translateY(0);
   transition: transform 0.6s ease;
@@ -807,7 +793,8 @@ svg:hover .heart-stroke-gradient {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  padding: 2vh 0 0 1vw;
+  padding: 4.5vh 5vw 0 1vw;
+  transform: translateX(0);
   line-height: 28px;
   transition: transform 0.3s ease;
 }
@@ -827,13 +814,17 @@ svg:hover .heart-stroke-gradient {
   align-items: center;
   height: 75px;
   background: #99E2D0;
-  opacity: 0;
+  transform-origin: right;
+  width: 0px;
 }
 .options:hover .anim-wrapper__check {
-  animation: check-scale 0.4s ease forwards;
+  width: 59px;
+  animation: check-scale 0.3s ease forwards;
 }
 .options:hover .anim-wrapper__price {
-  padding: 5.5vh 2vw 0 7vw;
+  transform: translateX(-6vw);
+  padding: 4.5vh 0 0 4vw;
+  margin-left: 2em;
 }
 @media (min-width: 768px) {
   .options:hover .anim-wrapper__price {

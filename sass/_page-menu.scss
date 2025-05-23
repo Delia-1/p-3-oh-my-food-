@@ -1,12 +1,11 @@
 
 .main-container-restau {
   animation: none;
+  opacity: 1;
 }
 
-
 .image__restaurant {
-  object-fit: cover;
-  width: 100%;
+  @include image-cover-full;
   height: 17em;
 
   @media (min-width: $breakpoint-tablet) {
@@ -20,17 +19,8 @@
 
 // MAIN
 
-main {
-  @media (min-width: $breakpoint-desktop) {
-    // position: relative;
-  }
-}
-
 .menu {
-  // width: 100%;
-  @include display-f-just-center;
-  align-items: flex-start;
-  flex-direction: column;
+  @include display-f-col;
   background-color: $bg-light-grey;
   margin-top: -58px;
   border-radius: $radius-top;
@@ -52,15 +42,12 @@ main {
       }
 
   &__name-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    @include display-f-just-center;
     gap: 9vw;
     margin-bottom: -4px;
     padding-left: 3vw;
 
     @media (min-width: $breakpoint-tablet) {
-      justify-content: center;
       padding-top: 21px;
       padding-left: 4px;
       gap: 22px;

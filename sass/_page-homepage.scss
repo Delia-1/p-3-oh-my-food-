@@ -7,8 +7,7 @@
   align-items: center;
   justify-content: center;
   will-change: opacity, transform;
-
-  animation: hide-loader 3s ease-in forwards;
+  animation: hide-loader 0s steps(1, end) 3s forwards;
   opacity: 1;
 
   &__up-logo {
@@ -23,9 +22,10 @@
     position: absolute;
     fill: $primary-color;
     z-index: 10;
-    will-change: opacity, transform;
-    animation: roll-in-left 1.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.3s both,
-     roll-out-right 1.2s ease 1.8s;
+    will-change: transform;
+    animation:
+    roll-in-left 1.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.2s both,
+    roll-out-right 1.3s ease forwards 1.8s;
   }
 }
 
@@ -34,7 +34,9 @@
   display: flex;
   flex-direction: column;
   max-width: 2000px;
-  animation: hide-main-container 3s ease-in;
+  // animation: hide-main-container 3s ease-in;
+    opacity: 0;
+    animation: hide-main-container 3s steps(1, end)  forwards;
   // will-change: opacity, transform;
 }
 
@@ -248,9 +250,8 @@
     position: relative;
 
     &__img {
-      object-fit: cover;
+      @include image-cover-full;
       object-position: center 60%;
-      width: 100%;
       height: 11em;
       border-radius: 20px 20px 0 0;
 
