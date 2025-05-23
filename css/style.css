@@ -617,7 +617,7 @@ ul {
 }
 @media (min-width: 768px) {
   .footer {
-    padding: 5vh 4vw 4vh 4vw;
+    padding: 2vh 4vw;
   }
 }
 @media (min-width: 1024px) {
