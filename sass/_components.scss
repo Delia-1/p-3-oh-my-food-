@@ -203,12 +203,12 @@
 
 // HEART ANIMATED HOMEPAGE + MENU
 
-.heartGradient stop:first-child {
-  stop-color: $primary-color;
-}
-.heartGradient stop:last-child {
-  stop-color: $secondary-color;
-}
+// .heartGradient stop:first-child {
+//   stop-color: $primary-color;
+// }
+// .heartGradient stop:last-child {
+//   stop-color: $secondary-color;
+// }
 
 .maskRect {
   transform: translateY(0);
@@ -291,12 +291,15 @@ svg:hover .heart-stroke-gradient {
 
     &__price {
       @include text-15(600);
-      padding: 6vh 0 0 1vw;
+      padding: 2vh 0 0 1vw;
       line-height: 28px;
       transition: transform 0.3s ease;
 
+        @media (min-width: $breakpoint-tablet) {
+        padding: 3vh 0 0 1vw;
+      }
         @media (min-width: $breakpoint-desktop) {
-        padding: 4vh 0 0 1vw;
+        padding: 4.5vh 0 0 1vw;
       }
     }
 
@@ -315,8 +318,12 @@ svg:hover .heart-stroke-gradient {
   &:hover .anim-wrapper__price {
     padding: 5.5vh 2vw 0 7vw;
 
+    @media (min-width: $breakpoint-tablet) {
+       padding: 3vh 2vw 0 7vw;
+      }
+
     @media (min-width: $breakpoint-desktop) {
-       padding: 4vh 2vw 0 7vw;
+       padding: 4.5vh 2vw 0 7vw;
       }
   }
 
