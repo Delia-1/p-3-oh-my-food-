@@ -16,7 +16,7 @@ ul {
   position: relative;
   position: fixed;
   inset: 0;
-  background: #EAEAEA;
+  background: #eaeaea;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@ ul {
 }
 .loader__rolling-plate {
   position: absolute;
-  fill: #9356DC;
+  fill: #9356dc;
   z-index: 10;
   will-change: transform;
   animation: roll-in-left 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both, roll-out-right 1.3s ease forwards 1.8s;
@@ -53,7 +53,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding: 2.2em 1.5em;
 }
 @media (min-width: 1024px) {
@@ -131,7 +131,7 @@ ul {
   border-radius: 20px;
   padding: 0 10vw;
   gap: 6vw;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   position: relative;
   margin-left: 8px;
@@ -176,7 +176,7 @@ ul {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -196,10 +196,10 @@ ul {
 }
 .step .card__icon {
   font-size: 19px;
-  color: #7E7E7E;
+  color: #7e7e7e;
 }
 .step .card__icon--primary {
-  color: #9356DC;
+  color: #9356dc;
   font-size: 18px;
 }
 .step .card__title {
@@ -209,7 +209,7 @@ ul {
 }
 
 .restaurants {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   padding: 4vh 3vw 11vh 3vw;
 }
 @media (min-width: 768px) {
@@ -289,7 +289,7 @@ ul {
 .restaurants .image__btn {
   position: absolute;
   color: #008766;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   top: 12px;
   right: 20px;
   border-radius: 2px;
@@ -355,7 +355,7 @@ ul {
 .menu {
   display: flex;
   flex-direction: column;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   margin-top: -58px;
   border-radius: 40px 40px 0 0;
   padding: 12px 3vw 19px 3vw;
@@ -435,7 +435,7 @@ ul {
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 3px solid #99e2d0;
   padding-bottom: 6px;
   width: 10%;
 }
@@ -486,12 +486,13 @@ ul {
 }
 @keyframes check-scale {
   0% {
-    opacity: 0;
-    transform: scaleX(0);
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   100% {
-    opacity: 1;
-    transform: scaleY(1);
+    width: 59px;
+    padding-left: 0;
   }
 }
 @keyframes fade-in-bottom {
@@ -569,7 +570,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   margin-bottom: 5px;
 }
 @media (min-width: 1024px) {
@@ -677,7 +678,7 @@ ul {
   font-size: 16px;
   font-weight: 500;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   border-radius: 25px;
   color: #ffffff;
   padding: 16px 18px 16px 24px;
@@ -710,11 +711,11 @@ ul {
 }
 
 .heartGradient stop:first-child {
-  stop-color: #9356DC;
+  stop-color: #9356dc;
 }
 
 .heartGradient stop:last-child {
-  stop-color: #FF79DA;
+  stop-color: #ff79da;
 }
 
 .maskRect {
@@ -752,7 +753,7 @@ svg:hover .heart-stroke-gradient {
   background: #ffffff;
   width: 94vw;
   height: 69px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -802,26 +803,23 @@ svg:hover .heart-stroke-gradient {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  padding: 35px 15px 0 20px;
-  transform: translateX(0);
+  padding: 35px 0 0 20px;
   line-height: 28px;
-  transition: transform 0.5s ease;
 }
 .options .anim-wrapper__check {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 75px;
-  background: #99E2D0;
-  transform-origin: right;
-  width: 0px;
+  background: #99e2d0;
+  opacity: 0;
 }
 .options:hover .anim-wrapper__check {
-  width: 59px;
-  animation: check-scale 0.3s ease forwards;
+  opacity: 1;
+  animation: check-scale 0.3s ease-in-out forwards;
 }
 .options:hover .anim-wrapper__price {
-  transform: translateX(-1em);
+  padding: 35px 15px 0 20px;
   margin-left: 2em;
 }
 .options .fa-circle-check {

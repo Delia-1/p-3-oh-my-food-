@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Cela indique au navigateur de définir la largeur du viewport égale à celle de l'appareil et de ne pas appliquer de zoom initial.​ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +18,9 @@
     <svg class="loader__rolling-plate" width="90px" height="90px" viewbox="0 0 512 512"><path d="M0 192c0-35.3 28.7-64 64-64c.5 0 1.1 0 1.6 0C73 91.5 105.3 64 144 64c15 0 29 4.1 40.9 11.2C198.2 49.6 225.1 32 256 32s57.8 17.6 71.1 43.2C339 68.1 353 64 368 64c38.7 0 71 27.5 78.4 64c.5 0 1.1 0 1.6 0c35.3 0 64 28.7 64 64c0 11.7-3.1 22.6-8.6 32L8.6 224C3.1 214.6 0 203.7 0 192zm0 91.4C0 268.3 12.3 256 27.4 256l457.1 0c15.1 0 27.4 12.3 27.4 27.4c0 70.5-44.4 130.7-106.7 154.1L403.5 452c-2 16-15.6 28-31.8 28l-231.5 0c-16.1 0-29.8-12-31.8-28l-1.8-14.4C44.4 414.1 0 353.9 0 283.4z"/></svg>
     <img class="loader__up-logo" src="./images/logo/omf-loader.svg" alt="">
   </div>
+
   <div class="main-container">
+
     <header class="header">
       <div class="wrapper-logo">
         <h1 class="wrapper-logo__title">
@@ -31,15 +32,18 @@
         <p class="location__place">Paris, Belleville</p>
       </div>
     </header>
+
     <main>
       <section class="nav">
         <h2 class="nav__title">Réservez le menu qui vous convient</h2>
         <p class="nav__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
         <a href="#" class="nav__btn">Explorer nos restaurants</a>
       </section>
+
       <section class="step">
         <h3 class="step__title">Fonctionnement</h3>
         <div class="step__cards">
+
           <article class="card">
             <div class="card__number">1</div>
             <i class="fa-solid fa-mobile-screen-button card__icon"></i>
@@ -50,7 +54,7 @@
             <div class="card__number">2</div>
             <i class="fa-solid fa-list-ul card__icon"></i>
             <h4 class="card__title">Composez votre menu</h4>
-        </article>
+         </article>
 
         <article class="card card--third">
           <div class="card__number">3</div>
@@ -58,16 +62,13 @@
           <h4 class="card__title">Dégustez au restaurant</h4>
         </article>
         </div>
-
-
       </section>
 
       <section class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <div class="restaurants__container">
-          <a href="restaurants/palette-du-gout.html" class="restaurants__article">
 
-            <!-- article,  pas plus de 2niveaux + dissocier les blocs en fonction du sujet -->
+          <a href="restaurants/palette-du-gout.html" class="restaurants__article">
             <article class="article">
               <div class="image">
                 <img class="image__img" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'une assiette au restaurant">
@@ -260,28 +261,28 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="footer__title-cont">
         <h4 class="footer__title" >ohmyfood</h4>
       </div>
       <ul class="list__links">
-      <li>
-        <a href="" class="link">
-          <i class="fa-solid fa-utensils link__icon"></i>Proposez un restaurant
-        </a>
-      </li>
-
-      <li>
-        <a href="" class="link">
-          <i class="fa-solid fa-handshake-angle link__icon"></i>Devenir partenaire
-        </a>
-      </li>
-      <li>
-        <a href="" class="link link--third">Mentions légales</a>
-      </li>
-      <li>
-        <a href="mailto:monSite@gmail.com" class="link">Contact</a>
-      </li>
+        <li>
+          <a href="" class="link">
+            <i class="fa-solid fa-utensils link__icon"></i>Proposez un restaurant
+          </a>
+        </li>
+        <li>
+          <a href="" class="link">
+            <i class="fa-solid fa-handshake-angle link__icon"></i>Devenir partenaire
+          </a>
+        </li>
+        <li>
+          <a href="" class="link link--third">Mentions légales</a>
+        </li>
+        <li>
+          <a href="mailto:monSite@gmail.com" class="link">Contact</a>
+        </li>
       </ul>
     </footer>
   </div>

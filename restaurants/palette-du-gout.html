@@ -1,230 +1,276 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <!-- Cela indique au navigateur de définir la largeur du viewport égale à celle de l'appareil et de ne pas appliquer de zoom initial.​ -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ohmyfood</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-  <div class="main-container main-container-restau">
-    <header class="header">
-      <div class="wrapper-logo">
-        <h1 class="wrapper-logo__title">
-          <a class="link-homepage" href="../index.html">
-            <svg class="link-homepage__icon" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-          </a>
-          <img class="logo logo--menu" src="../images/logo/ohmyfood.png" alt="ohmyfood le super site de reservations de repas">
-        </h1>
-      </div>
-      <div class="image">
-        <img  class="image__restaurant" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat de restaurant">
-      </div>
-    </header>
-    <main>
-      <div class="menu">
-        <div class="menu__name-container">
-          <h1 class="menu__name">La palette du goût</h1>
-          <svg width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="heartGradient-5" class="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%"/>
-                <stop offset="100%"/>
-              </linearGradient>
-
-              <mask id="fillMask-5" class="fillMask">
-                <rect x="0" y="0" width="100%" height="100%" fill="white"/>
-                <rect class="maskRect" x="0" y="0" width="100%" height="100%" fill="black"/>
-              </mask>
-            </defs>
-            <path
-              class="heartFill"
-              d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-              fill="url(#heartGradient-5)"
-              mask="url(#fillMask-5)"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="main-container main-container-restau">
+      <header class="header">
+        <div class="wrapper-logo">
+          <h1 class="wrapper-logo__title">
+            <a class="link-homepage" href="../index.html">
+              <svg class="link-homepage__icon" viewBox="0 0 448 512">
+                <path
+                  d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+                />
+              </svg>
+            </a>
+            <img
+              class="logo logo--menu"
+              src="../images/logo/ohmyfood.png"
+              alt="ohmyfood le super site de reservations de repas"
             />
-            <path
-              class="heart-stroke-black"
-              d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-              fill="none"
-              stroke="black"
-              stroke-width="1.5"
-           />
-            <path
-              class="heart-stroke-gradient"
-              d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
-              fill="none"
-              stroke="url(#heartGradient-5)"
-              stroke-width="1"
-            />
-          </svg>
+          </h1>
         </div>
+        <div class="image">
+          <img
+            class="image__restaurant"
+            src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt="Plat de restaurant"
+          />
+        </div>
+      </header>
 
-        <section class="menu__course" data-index="1">
-          <h2 class="menu__course__title">Entrées</h2>
+      <main>
+        <div class="menu">
+          <div class="menu__name-container">
+            <h1 class="menu__name">La palette du goût</h1>
+            <svg
+              class="heart-fill"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient
+                  id="heartGradient-5"
+                  class="heartGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" />
+                  <stop offset="100%" />
+                </linearGradient>
 
-          <article class="options">
-            <div class="options__texts">
-              <h3 class="label">Fricassée d'escargots</h3>
-              <small class="subtitle">Au piment d'Espelette </small>
-            </div>
-            <div class="anim-wrapper">
-              <span class="anim-wrapper__price">25€</span>
-              <div class="anim-wrapper__check">
-                <i class="fa-solid fa-circle-check"></i>
+                <mask id="fillMask-5" class="fillMask">
+                  <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                  <rect
+                    class="maskRect"
+                    x="0"
+                    y="0"
+                    width="100%"
+                    height="100%"
+                    fill="black"
+                  />
+                </mask>
+              </defs>
+              <path
+                class="heartFill"
+                d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                fill="url(#heartGradient-5)"
+                mask="url(#fillMask-5)"
+              />
+              <path
+                class="heart-stroke-black"
+                d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                fill="none"
+                stroke="black"
+                stroke-width="1.5"
+              />
+              <path
+                class="heart-stroke-gradient"
+                d="M12.2207 2.40527C14.1599 0.222558 17.2057 -0.147219 19.3223 1.62402L19.5244 1.80176C21.9408 4.05164 22.1447 8.0625 20.1152 10.6074L19.9121 10.8496L11.5977 20.2148C11.2807 20.5716 10.8021 20.5941 10.4648 20.2822L10.3994 20.2148L2.08496 10.8496C-0.0847856 8.40259 -0.0235333 4.38556 2.25 2.02539L2.47656 1.80176C4.53112 -0.108075 7.5843 0.134683 9.58887 2.19922L9.78027 2.40527L10.627 3.35742L11.001 3.77734L11.374 3.35742L12.2207 2.40527Z"
+                fill="none"
+                stroke="url(#heartGradient-5)"
+                stroke-width="1"
+              />
+            </svg>
+          </div>
+          <section class="menu__course" data-index="1">
+            <h2 class="menu__course__title">Entrées</h2>
+
+            <article class="options">
+              <div class="options__texts">
+                <h3 class="label">Fricassée d'escargots</h3>
+                <small class="subtitle">Au piment d'Espelette </small>
               </div>
-            </div>
-          </article>
-
-
-          <article class="options">
-            <div class="options__texts">
-              <h3 class="label">Foie gras de canard mi-cuit</h3>
-              <small class="subtitle">Et ses copeaux de truffe noire</small>
-            </div>
-            <div class="anim-wrapper">
-              <span class="anim-wrapper__price">35€</span>
-              <div class="anim-wrapper__check">
-                <i class="fa-solid fa-circle-check"></i>
+              <div class="anim-wrapper">
+                <span class="anim-wrapper__price">25€</span>
+                <div class="anim-wrapper__check">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="options options--last">
-            <div class="options__texts">
-              <h3 class="label">Œuf au plat</h3>
-              <small class="subtitle">Assaisonné à la truffe sur lit de caviar</small>
-            </div>
-            <div class="anim-wrapper">
-              <span class="anim-wrapper__price">20€</span>
-              <div class="anim-wrapper__check">
-                <i class="fa-solid fa-circle-check"></i>
+            <article class="options">
+              <div class="options__texts">
+                <h3 class="label">Foie gras de canard mi-cuit</h3>
+                <small class="subtitle">Et ses copeaux de truffe noire</small>
               </div>
-            </div>
-          </article>
-
-        </section>
-
-        <section class="menu__course" data-index="2">
-          <h2 class="menu__course__title">Plats</h2>
-              <article class="options">
-                <div class="options__texts">
-                  <h3 class="label">Filet de bœuf aux herbes</h3>
-                  <small class="subtitle">Accompagné de sa ribambelle de légumes</small>
+              <div class="anim-wrapper">
+                <span class="anim-wrapper__price">35€</span>
+                <div class="anim-wrapper__check">
+                  <i class="fa-solid fa-circle-check"></i>
                 </div>
-                <div class="anim-wrapper">
-                  <span class="anim-wrapper__price">40€</span>
-                  <div class="anim-wrapper__check">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </div>
-              </article>
-
-              <article class="options">
-                <div class="options__texts">
-                  <h3 class="label">Parmentier de queue de bœuf</h3>
-                  <small class="subtitle">À la truffe noire sur sa purée de panais</small>
-                </div>
-                <div class="anim-wrapper">
-                  <span class="anim-wrapper__price">35€</span>
-                  <div class="anim-wrapper__check">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </div>
-              </article>
-
-              <article class="options options--last">
-                <div class="options__texts">
-                  <h3 class="label">Filet de turbot</h3>
-                  <small class="subtitle">Aux agrumes</small>
-                </div>
-                <div class="anim-wrapper">
-                  <span class="anim-wrapper__price">44€</span>
-                  <div class="anim-wrapper__check">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </div>
-              </article>
-        </section>
-
-        <section class="menu__course" data-index="3">
-          <h2 class="menu__course__title">Desserts</h2>
-
-          <article class="options">
-            <div class="options__texts">
-              <h3 class="label">Paris-Brest</h3>
-              <small class="subtitle">Revisité</small>
-            </div>
-            <div class="anim-wrapper">
-              <span class="anim-wrapper__price">18€</span>
-              <div class="anim-wrapper__check">
-                <i class="fa-solid fa-circle-check"></i>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article class="options">
-            <div class="options__texts">
-              <h3 class="label">Macaron au chocolat d'exception</h3>
-              <small class="subtitle">Et glace à la vanille de Madagascar</small>
-            </div>
-            <div class="anim-wrapper">
-              <span class="anim-wrapper__price">22€</span>
-              <div class="anim-wrapper__check">
-                <i class="fa-solid fa-circle-check"></i>
+            <article class="options options--last">
+              <div class="options__texts">
+                <h3 class="label">Œuf au plat</h3>
+                <small class="subtitle"
+                  >Assaisonné à la truffe sur lit de caviar</small
+                >
               </div>
-            </div>
-          </article>
-
-          <article class="options options--last">
-            <div class="options__texts">
-              <h3 class="label">Mousse au chocolat</h3>
-              <small class="subtitle">Au piment d'Espelette et à la truffe noire</small>
-            </div>
-            <div class="anim-wrapper">
-              <span class="anim-wrapper__price">23€</span>
-              <div class="anim-wrapper__check">
-                <i class="fa-solid fa-circle-check"></i>
+              <div class="anim-wrapper">
+                <span class="anim-wrapper__price">20€</span>
+                <div class="anim-wrapper__check">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
               </div>
-            </div>
-          </article>
-        </section>
-        <a href="#" class="nav__btn nav__btn--menu">Commander</a>
-      </div>
-    </main>
+            </article>
+          </section>
 
-    <footer class="footer">
-      <div class="footer__title-cont">
-        <h4 class="footer__title" >ohmyfood</h4>
-      </div>
-      <ul class="list__links">
-      <li>
-        <a href="" class="link">
-          <i class="fa-solid fa-utensils link__icon"></i>Proposez un restaurant
-        </a>
-      </li>
+          <section class="menu__course" data-index="2">
+            <h2 class="menu__course__title">Plats</h2>
+            <article class="options">
+              <div class="options__texts">
+                <h3 class="label">Filet de bœuf aux herbes</h3>
+                <small class="subtitle"
+                  >Accompagné de sa ribambelle de légumes</small
+                >
+              </div>
+              <div class="anim-wrapper">
+                <span class="anim-wrapper__price">40€</span>
+                <div class="anim-wrapper__check">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+              </div>
+            </article>
 
-      <li>
-        <a href="" class="link">
-          <i class="fa-solid fa-handshake-angle link__icon"></i>Devenir partenaire
-        </a>
-      </li>
-      <li>
-        <a href="" class="link link--third">Mentions légales</a>
-      </li>
-      <li>
-        <a href="mailto:monSite@gmail.com"" class="link">Contact</a>
-      </li>
-      </ul>
-    </footer>
-  </div>
-</body>
+            <article class="options">
+              <div class="options__texts">
+                <h3 class="label">Parmentier de queue de bœuf</h3>
+                <small class="subtitle"
+                  >À la truffe noire sur sa purée de panais</small
+                >
+              </div>
+              <div class="anim-wrapper">
+                <span class="anim-wrapper__price">35€</span>
+                <div class="anim-wrapper__check">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+              </div>
+            </article>
+
+            <article class="options options--last">
+              <div class="options__texts">
+                <h3 class="label">Filet de turbot</h3>
+                <small class="subtitle">Aux agrumes</small>
+              </div>
+              <div class="anim-wrapper">
+                <span class="anim-wrapper__price">44€</span>
+                <div class="anim-wrapper__check">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="menu__course" data-index="3">
+            <h2 class="menu__course__title">Desserts</h2>
+
+            <article class="options">
+              <div class="options__texts">
+                <h3 class="label">Paris-Brest</h3>
+                <small class="subtitle">Revisité</small>
+              </div>
+              <div class="anim-wrapper">
+                <span class="anim-wrapper__price">18€</span>
+                <div class="anim-wrapper__check">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+              </div>
+            </article>
+
+            <article class="options">
+              <div class="options__texts">
+                <h3 class="label">Macaron au chocolat d'exception</h3>
+                <small class="subtitle"
+                  >Et glace à la vanille de Madagascar</small
+                >
+              </div>
+              <div class="anim-wrapper">
+                <span class="anim-wrapper__price">22€</span>
+                <div class="anim-wrapper__check">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+              </div>
+            </article>
+
+            <article class="options options--last">
+              <div class="options__texts">
+                <h3 class="label">Mousse au chocolat</h3>
+                <small class="subtitle"
+                  >Au piment d'Espelette et à la truffe noire</small
+                >
+              </div>
+              <div class="anim-wrapper">
+                <span class="anim-wrapper__price">23€</span>
+                <div class="anim-wrapper__check">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+              </div>
+            </article>
+          </section>
+          <a href="#" class="nav__btn nav__btn--menu">Commander</a>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__title-cont">
+          <h4 class="footer__title">ohmyfood</h4>
+        </div>
+        <ul class="list__links">
+          <li>
+            <a href="" class="link">
+              <i class="fa-solid fa-utensils link__icon"></i>
+              Proposez un restaurant
+            </a>
+          </li>
+          <li>
+            <a href="" class="link">
+              <i class="fa-solid fa-handshake-angle link__icon"></i>
+              Devenir partenaire
+            </a>
+          </li>
+          <li>
+            <a href="" class="link link--third">Mentions légales</a>
+          </li>
+          <li>
+            <a href="mailto:monSite@gmail.com" class="link">Contact</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>

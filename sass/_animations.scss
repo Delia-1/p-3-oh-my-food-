@@ -12,7 +12,7 @@
   }
 }
 
- @keyframes roll-in-left {
+@keyframes roll-in-left {
   0% {
     transform: translateX(-800px) rotate(-540deg);
   }
@@ -25,14 +25,12 @@
   0% {
     transform: translateX(0) rotate(0deg);
   }
-
   100% {
     transform: translateX(800px) rotate(540deg);
   }
 }
 
-
- @keyframes text-pop-up-top {
+@keyframes text-pop-up-top {
   0% {
     scale: 0%;
     opacity: 0;
@@ -45,27 +43,27 @@
   }
 }
 
-
 // ANIMATION CHECK EXTEND
 
 @keyframes check-scale {
   0% {
-    // width: 0;
-    // padding-left: 0;
-    // padding-right: 0;
-    opacity: 0;
-    transform: scaleX(0) ;
+    width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    // opacity: 0;
+    // transform: scaleX(0) ;
   }
   100% {
-    // width: 59px;
-    // padding-left: 0;
-    opacity: 1;
-    transform: scaleY(1);
+    width: 59px;
+    padding-left: 0;
+    // opacity: 1;
+    // transform: scaleY(1);
   }
 }
 
+// ANIM SECTIONS MENUS SLIDE
 
- @keyframes fade-in-bottom {
+@keyframes fade-in-bottom {
   0% {
     transform: translateY(75px);
     opacity: 0;
