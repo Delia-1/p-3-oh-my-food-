@@ -291,18 +291,10 @@ svg:hover .heart-stroke-gradient {
 
     &__price {
       @include text-15(600);
-      // padding: 6vh 0 0 1vw;
-      padding: 4.5vh 5vw 0 1vw;
+      padding: 35px 15px 0 20px;
       transform: translateX(0);
       line-height: 28px;
-      transition:transform 0.3s ease;
-
-        @media (min-width: $breakpoint-tablet) {
-        padding: 3vh 0 0 1vw;
-      }
-        @media (min-width: $breakpoint-desktop) {
-        padding: 4.5vh 0 0 1vw;
-      }
+      transition: transform 0.5s ease;
     }
 
 
@@ -321,17 +313,8 @@ svg:hover .heart-stroke-gradient {
     animation: check-scale 0.3s ease forwards;
   }
   &:hover .anim-wrapper__price {
-    transform: translateX(-6vw);
-    padding: 4.5vh 0 0 4vw;
+    transform: translateX(-1em);
     margin-left: 2em;
-
-    @media (min-width: $breakpoint-tablet) {
-       padding: 3vh 2vw 0 7vw;
-      }
-
-    @media (min-width: $breakpoint-desktop) {
-       padding: 4.5vh 2vw 0 7vw;
-      }
   }
 
   .fa-circle-check {

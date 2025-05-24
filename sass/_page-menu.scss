@@ -43,15 +43,23 @@
 
   &__name-container {
     @include display-f-just-center;
+    justify-content: flex-start;
+    width: 100%;
     gap: 9vw;
     margin-bottom: -4px;
     padding-left: 3vw;
 
     @media (min-width: $breakpoint-tablet) {
       padding-top: 21px;
-      padding-left: 4px;
-      gap: 22px;
+      padding-left: 8vw;
+      gap: 22vw;
       margin-bottom: 8px;
+    }
+
+     @media (min-width: $breakpoint-desktop) {
+       justify-content: center;
+       gap: 2vw;
+       padding: 21px 0 0 0;
     }
   }
 

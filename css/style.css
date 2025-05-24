@@ -381,6 +381,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
   gap: 9vw;
   margin-bottom: -4px;
   padding-left: 3vw;
@@ -388,9 +390,16 @@ ul {
 @media (min-width: 768px) {
   .menu__name-container {
     padding-top: 21px;
-    padding-left: 4px;
-    gap: 22px;
+    padding-left: 8vw;
+    gap: 22vw;
     margin-bottom: 8px;
+  }
+}
+@media (min-width: 1024px) {
+  .menu__name-container {
+    justify-content: center;
+    gap: 2vw;
+    padding: 21px 0 0 0;
   }
 }
 .menu__name {
@@ -793,20 +802,10 @@ svg:hover .heart-stroke-gradient {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  padding: 4.5vh 5vw 0 1vw;
+  padding: 35px 15px 0 20px;
   transform: translateX(0);
   line-height: 28px;
-  transition: transform 0.3s ease;
-}
-@media (min-width: 768px) {
-  .options .anim-wrapper__price {
-    padding: 3vh 0 0 1vw;
-  }
-}
-@media (min-width: 1024px) {
-  .options .anim-wrapper__price {
-    padding: 4.5vh 0 0 1vw;
-  }
+  transition: transform 0.5s ease;
 }
 .options .anim-wrapper__check {
   display: flex;
@@ -822,19 +821,8 @@ svg:hover .heart-stroke-gradient {
   animation: check-scale 0.3s ease forwards;
 }
 .options:hover .anim-wrapper__price {
-  transform: translateX(-6vw);
-  padding: 4.5vh 0 0 4vw;
+  transform: translateX(-1em);
   margin-left: 2em;
-}
-@media (min-width: 768px) {
-  .options:hover .anim-wrapper__price {
-    padding: 3vh 2vw 0 7vw;
-  }
-}
-@media (min-width: 1024px) {
-  .options:hover .anim-wrapper__price {
-    padding: 4.5vh 2vw 0 7vw;
-  }
 }
 .options .fa-circle-check {
   color: #ffffff;
