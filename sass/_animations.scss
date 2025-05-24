@@ -48,14 +48,13 @@
 @keyframes check-scale {
   0% {
     width: 0;
-    padding-left: 0;
-    padding-right: 0;
+
     // opacity: 0;
     // transform: scaleX(0) ;
   }
   100% {
     width: 59px;
-    padding-left: 0;
+
     // opacity: 1;
     // transform: scaleY(1);
   }

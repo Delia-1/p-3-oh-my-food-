@@ -53,14 +53,16 @@ Ce projet est **statique** (HTML + SCSS uniquement), il peut donc être ouvert d
 Le projet utilise **Sass (SCSS)**.
 Aucune dépendance JavaScript n'est nécessaire, mais vous pouvez compiler les fichiers SCSS avec Sass en local si vous souhaitez modifier les styles.
 
-#### ▶️ Installer Sass CLI (si besoin)
+1. **Installer Sass CLI (si besoin)** :
+   ```bash
+npm install -g sass
 
-<!-- ```bash
-npm install -g sass -->
-#### Compiler automatiquement
-<!-- sass ./scss:./css --watch -->
+2. **Lancer en local** :
+   ```bash
+sass ./scss:./css --watch
 
-# 💅 Particularités techniques
+
+#  Particularités techniques
 
 ### 🔁 100% HTML + SCSS
 
@@ -84,28 +86,22 @@ L’intégration a été pensée en **Mobile First** dès le départ :
 
 ---
 
-### 🧱 SCSS modulaire
+### 🧩 Architecture SCSS modulaire
 
-L'organisation des styles suit une structure claire et maintenable :
-scss/
-│
-├── base/ # Reset, typographies, variables globales
-│ ├── _reset.scss
-│ ├── _variables.scss
-│ └── _mixins.scss
-│
-├── components/ # Boutons, loaders, cœurs, etc.
-│ └── _components.scss
-│
-├── pages/ # Styles propres aux pages (home, menus)
-│ ├── _home.scss
-│ └── _menus.scss
-│
-├── utils/ # Animations, helpers
-│ └── _animations.scss
-│
-└── main.scss # Fichier principal qui importe tous les autres
+Le projet suit une organisation inspirée du modèle “7-in-1”.
 
+Les fichiers sont séparés par rôle :
+- __bases: pour les variables et mixins, et regles globales,
+- __components: composants réutilisés dans le projets (coeurs, header, footer, ... ),
+- __animations: regroupe tous les scss concernant les animations (loader, scale-check, ... )
+- __page-homepage / __page-menu: styles spécifiques à chaque page isolés.
+- index fichier scss important tous les autres fichers de style
+
+
+Cette structure rend le code plus lisible,
+plus maintenable et conforme aux bonnes pratiques Sass.
+Il se rapproche de l'architure mise en place dans des projets utilisants des blocs html reutilisables,
+Comme des projets Reacts.
 ---
 
 ## 🔗 Live preview

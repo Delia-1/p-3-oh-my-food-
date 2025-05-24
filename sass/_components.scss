@@ -209,12 +209,12 @@ svg:hover .maskRect {
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
 }
+svg:hover .heart-stroke-black {
+  opacity: 0;
+}
 .heart-stroke-gradient {
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
-}
-svg:hover .heart-stroke-black {
-  opacity: 0;
 }
 svg:hover .heart-stroke-gradient {
   opacity: 1;
@@ -295,9 +295,8 @@ svg:hover .heart-stroke-gradient {
     animation: check-scale 0.3s ease-in-out forwards;
   }
   &:hover .anim-wrapper__price {
-    padding: 35px 15px 0 20px;
-    margin-left: 2em;
-    // transform: translateX(-1em);
+    // padding: 35px 15px 0 20px;
+    padding-right: 15px;
   }
 
   .fa-circle-check {
