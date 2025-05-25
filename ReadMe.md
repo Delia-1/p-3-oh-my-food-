@@ -49,17 +49,16 @@ Ce projet est **statique** (HTML + SCSS uniquement), il peut donc être ouvert d
 ---
 
 ### 3. Compiler les fichiers SCSS
-
 Le projet utilise **Sass (SCSS)**.
 Aucune dépendance JavaScript n'est nécessaire, mais vous pouvez compiler les fichiers SCSS avec Sass en local si vous souhaitez modifier les styles.
 
 1. **Installer Sass CLI (si besoin)** :
    ```bash
-npm install -g sass
+   npm install -g sass
 
 2. **Lancer en local** :
    ```bash
-sass ./scss:./css --watch
+   sass ./scss:./css --watch
 
 
 #  Particularités techniques
@@ -97,8 +96,7 @@ Les fichiers sont séparés par rôle :
 - __page-homepage / __page-menu: styles spécifiques à chaque page isolés.
 - index fichier scss important tous les autres fichers de style
 
-
-Cette structure rend le code plus lisible,
+  Cette structure rend le code plus lisible,
 plus maintenable et conforme aux bonnes pratiques Sass.
 Il se rapproche de l'architure mise en place dans des projets utilisants des blocs html reutilisables,
 Comme des projets Reacts.

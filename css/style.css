@@ -36,7 +36,7 @@ ul {
   fill: #9356dc;
   z-index: 10;
   will-change: transform;
-  animation: roll-in-left 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both, roll-out-right 1.3s ease forwards 1.8s;
+  animation: roll-in-left 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s both, roll-out-right 1.2s ease forwards 1.8s;
 }
 
 .main-container {
@@ -641,7 +641,7 @@ ul {
 @media (min-width: 768px) {
   .footer .list__links {
     flex-direction: row;
-    gap: 6vw;
+    gap: 5vw;
   }
 }
 @media (min-width: 1024px) {

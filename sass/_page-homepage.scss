@@ -18,6 +18,7 @@
     animation: text-pop-up-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.1s forwards;
   }
 
+  // OPTIMISE POUR LES PETITS ECRANS
   &__rolling-plate {
     position: absolute;
     fill: $primary-color;
@@ -25,7 +26,7 @@
     will-change: transform;
     animation: roll-in-left 1.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s
         both,
-      roll-out-right 1.3s ease forwards 1.8s;
+      roll-out-right 1.2s ease forwards 1.8s;
   }
 }
 

@@ -118,7 +118,7 @@
 
     @media (min-width: $breakpoint-tablet) {
       flex-direction: row;
-      gap: 6vw;
+      gap: 5vw;
     }
 
     @media (min-width: $breakpoint-desktop) {
@@ -220,7 +220,7 @@ svg:hover .heart-stroke-gradient {
   opacity: 1;
 }
 
-// OPTIONS CARDS ON MENU PAGE
+// OPTIONS COURSES CARDS ON MENU PAGE
 
 .options {
   @include box-shadow-large(0.15);
