@@ -273,10 +273,8 @@ svg:hover .heart-stroke-gradient {
 
     &__price {
       @include text-15(600);
-      padding: 35px 0 0 20px;
+      padding: 35px 15px 0 20px;
       line-height: 28px;
-      // transform: translateX(0);
-      // transition: transform 0.4s ease;
     }
 
     &__check {
@@ -284,19 +282,14 @@ svg:hover .heart-stroke-gradient {
       height: 75px;
       background: $tertiary-color;
       opacity: 0;
-      // transform-origin: right;
-      // width: 0px;
+      transition: width 0.4s ease, opacity 0.4s ease-in;
+      width: 0px;
     }
   }
 
   &:hover .anim-wrapper__check {
-    // width: 59px;
+    width: 59px;
     opacity: 1;
-    animation: check-scale 0.3s ease-in-out forwards;
-  }
-  &:hover .anim-wrapper__price {
-    // padding: 35px 15px 0 20px;
-    padding-right: 15px;
   }
 
   .fa-circle-check {

@@ -484,14 +484,6 @@ ul {
     transform: translateY(-60px);
   }
 }
-@keyframes check-scale {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 59px;
-  }
-}
 @keyframes fade-in-bottom {
   0% {
     transform: translateY(75px);
@@ -800,7 +792,7 @@ svg:hover .heart-stroke-gradient {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  padding: 35px 0 0 20px;
+  padding: 35px 15px 0 20px;
   line-height: 28px;
 }
 .options .anim-wrapper__check {
@@ -810,13 +802,12 @@ svg:hover .heart-stroke-gradient {
   height: 75px;
   background: #99e2d0;
   opacity: 0;
+  transition: width 0.4s ease, opacity 0.4s ease-in;
+  width: 0px;
 }
 .options:hover .anim-wrapper__check {
+  width: 59px;
   opacity: 1;
-  animation: check-scale 0.3s ease-in-out forwards;
-}
-.options:hover .anim-wrapper__price {
-  padding-right: 15px;
 }
 .options .fa-circle-check {
   color: #ffffff;

@@ -43,23 +43,6 @@
   }
 }
 
-// ANIMATION CHECK EXTEND
-
-@keyframes check-scale {
-  0% {
-    width: 0;
-
-    // opacity: 0;
-    // transform: scaleX(0) ;
-  }
-  100% {
-    width: 59px;
-
-    // opacity: 1;
-    // transform: scaleY(1);
-  }
-}
-
 // ANIM SECTIONS MENUS SLIDE
 
 @keyframes fade-in-bottom {
